@@ -4,6 +4,7 @@ import mdItCustomAttrs from 'markdown-it-custom-attrs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   markdown: {
+    lineNumbers: true,
     config: (md) => {
       // use more markdown-it plugins!
       md.use(mdItCustomAttrs, 'image', {
@@ -46,7 +47,19 @@ export default defineConfig({
       '/rabbit-shop/': [
         {
           text: '小兔鲜儿项目',
-          items: [{ text: '项目首页', link: '/rabbit-shop/' }],
+          items: [
+            { text: '1.项目起步', link: '/rabbit-shop/' },
+            { text: '2.首页模块', link: '/rabbit-shop/#2' },
+            { text: '3.推荐模块', link: '/rabbit-shop/#3' },
+            { text: '4.分类模块', link: '/rabbit-shop/#4' },
+            { text: '5.详情模块', link: '/rabbit-shop/#5' },
+            { text: '6.登录模块', link: '/rabbit-shop/#6' },
+            { text: '7.地址模块', link: '/rabbit-shop/#7' },
+            { text: '8.SKU模块', link: '/rabbit-shop/#8' },
+            { text: '9.购物车模块', link: '/rabbit-shop/#9' },
+            { text: '10.订单模块', link: '/rabbit-shop/#10' },
+            { text: '11.项目打包', link: '/rabbit-shop/#11' },
+          ],
         },
       ],
     },

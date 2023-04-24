@@ -10,17 +10,7 @@
 
 ## 通过 HBuilderX 创建 uni-app 项目{#use-hbuilderx-create}
 
-**创建步骤**
-
-1. 下载安装 HbuilderX 编辑器
-2. 通过 HbuilderX 创建 uni-app vue3 项目
-3. 安装 uni-app vue3 编译器插件
-4. 编译成微信小程序端代码
-5. 开启服务端口
-
-温馨提示：**Hbuildex** 和 **uni-app** 都属于 [DCloud](https://dcloud.io) 公司的产品。
-
-#### 步骤图示
+#### 创建步骤
 
 **1.下载安装 HbuilderX 编辑器**
 
@@ -50,11 +40,13 @@
 
 ![Hbuildex 和 微信开发者工具 关系](assets/picture_7.png)
 
+温馨提示：**Hbuildex** 和 **uni-app** 都属于 [DCloud](https://dcloud.io) 公司的产品。
+
 ## pages.json 和 tabBar 案例{#pages-json-and-tabBar}
 
-### 目录介绍
+### 目录结构
 
-我们先来认识以下 uni-app 项目的目录结构。
+我们先来认识 uni-app 项目的目录结构。
 
 ```shell
 ├─pages            业务页面文件存放的目录
