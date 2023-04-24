@@ -32,6 +32,7 @@ export default defineConfig({
     ],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js' }],
   ],
+  lastUpdated: true,
   themeConfig: {
     logo: '/public/logo.png',
     siteTitle: 'uni-app小程序',
@@ -41,6 +42,7 @@ export default defineConfig({
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
       text: '帮我改正',
     },
+    lastUpdatedText: '最近更新',
     nav: [
       { text: 'uni-app', link: '/uni-app/' },
       { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
@@ -54,7 +56,7 @@ export default defineConfig({
           items: [
             { text: '1.项目起步', link: '/rabbit-shop/' },
             { text: '2.首页模块', link: '/rabbit-shop/home' },
-            { text: '3.推荐模块', link: '/rabbit-shop/#3' },
+            { text: '3.推荐模块', link: '/rabbit-shop/hot' },
             { text: '4.分类模块', link: '/rabbit-shop/#4' },
             { text: '5.详情模块', link: '/rabbit-shop/#5' },
             { text: '6.登录模块', link: '/rabbit-shop/#6' },
