@@ -294,8 +294,6 @@ declare module '@vue/runtime-core' {
 
 请求方式：GET
 
-登录权限：否
-
 请求参数：
 
 **Query:**
@@ -637,8 +635,6 @@ defineProps<{
 接口地址：/home/hot/mutli
 
 请求方式：GET
-
-登录权限：否
 
 请求参数：
 
