@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # 小兔鲜儿 - 项目起步
 
 ## 项目架构
@@ -7,6 +11,8 @@
 ![项目架构图](assets/index_picture_1.png)
 
 ## 拉取项目模板代码
+
+项目模板包含：目录结构，项目素材，代码风格。
 
 ### 模板地址
 
@@ -68,7 +74,11 @@ pnpm i -D @uni-helper/uni-ui-types
 
 说明：项目中 Pinia 用法平时完全一致，主要解决持久化插件**兼容性**问题。
 
+### 持久化存储插件
+
 持久化存储插件： [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/config.html#storage)
+
+插件默认使用 `localStorage` 实现持久化，小程序端不兼容，需要替换持久化 API。
 
 **网页端持久化 API**
 
@@ -242,7 +252,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
 
 ![diff](assets/index_picture_2.png)
 
-### 如何统一代码风格
+### 统一代码风格
 
 - 安装 `eslint` + `prettier`
 

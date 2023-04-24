@@ -37,6 +37,10 @@ export default defineConfig({
     siteTitle: 'uni-app小程序',
     returnToTopLabel: '返回顶部',
     // https://vitepress.dev/reference/default-theme-config
+    editLink: {
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      text: '帮我改正',
+    },
     nav: [
       { text: 'uni-app', link: '/uni-app/' },
       { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
@@ -67,7 +71,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/Megasu/heima-shop-vue3-ts-uniapp' }],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023 黑马程序员',
+      copyright: 'Copyright © 2023-present 黑马程序员',
     },
   },
 })

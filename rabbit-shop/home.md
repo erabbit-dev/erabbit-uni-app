@@ -1,4 +1,8 @@
-# 小兔鲜儿 -首页模块{#home}
+---
+outline: deep
+---
+
+# 小兔鲜儿 - 首页模块{#home}
 
 首页核心功能：自定义导航栏、广告位、猜你喜欢。
 
@@ -17,10 +21,6 @@
 2. 隐藏默认导航栏，修改文字颜色
 
 3. 样式适配 -> 安全区域
-
-**安全区域**
-
-![安全区域](assets/home_picture_2.png)
 
 **静态结构**
 
@@ -99,7 +99,15 @@
 </style>
 ```
 
-### 核心代码参考
+### 安全区域{#safeArea}
+
+不同手机的安全区域不同，适配安全区域能防止页面重要内容被遮挡。
+
+可通过 `uni.getSystemInfoSync()` 获取屏幕边界到安全区的距离。
+
+![安全区域](assets/home_picture_2.png)
+
+### 核心代码参考{#navbar-code}
 
 自定义导航配置
 
@@ -132,7 +140,7 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
 </template>
 ```
 
-## 通用轮播组件
+## 通用轮播组件{#XtxSwiper}
 
 **参考效果**
 
@@ -142,9 +150,7 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
 
 ![轮播组件](assets/home_picture_3.png)
 
-### 静态结构
-
-**布局分析**
+**静态结构**
 
 首页广告布局为独立的组件 `XtxSwiper` ，位于的 `src/components` 目录中。
 
@@ -278,7 +284,7 @@ declare module '@vue/runtime-core' {
 }
 ```
 
-### 获取数据
+### 获取数据{#get-home-banner}
 
 **接口调用**
 
@@ -339,7 +345,7 @@ export type BannerItem = {
 
 最后，将获得的数据结合模板语法渲染到页面中。
 
-### 参考代码
+### 参考代码{#xtx-swiper-code}
 
 轮播图组件：`src\components\XtxSwiper.vue`
 
@@ -383,19 +389,19 @@ defineProps<{
 </template>
 ```
 
-## 首页分类
+## 首页分类{#home-category}
 
-### 参考效果
+**参考效果**
 
 ![1677150782440](assets/home_picture_4.png)
 
-### 准备工作
+**准备工作**
 
 1. 准备组件，只有首页使用
 2. 导入并使用组件
 3. 设置首页底色为 `#F7F7F7`
 
-### 静态结构
+**静态结构**
 
 前台类目布局为独立的组件 `CategoryPanel`属于首页的业务组件，存放到首页的 `components` 目录中。
 
@@ -452,7 +458,7 @@ defineProps<{
 </style>
 ```
 
-### 获取数据
+### 获取数据{#get-home-category}
 
 **接口调用**
 
@@ -495,7 +501,7 @@ export type CategoryItem = {
 
 最后，将获得的数据结合模板语法渲染到页面中。
 
-### 参考代码
+### 参考代码{#home-category-code}
 
 `src\pages\index\components\CategoryPanel.vue`
 
@@ -525,7 +531,7 @@ defineProps<{
 </template>
 ```
 
-## 热门推荐
+## 热门推荐{#home-hot}
 
 热门推荐功能，后端根据用户的消费习惯等信息向用户推荐的一系列商品，前端负责展示这些商品展示给用户。
 
@@ -622,7 +628,7 @@ defineProps<{
 </style>
 ```
 
-### 获取数据
+### 获取数据{#get-home-hot}
 
 **接口调用**
 
@@ -689,7 +695,7 @@ export const getHomeHotAPI = () => {
 
 最后将获得的数据结合模板语法渲染到页面中。
 
-### 参考代码
+### 参考代码{#home-hot-code}
 
 `src\pages\index\components\HotPanel.vue`
 
@@ -725,7 +731,7 @@ defineProps<{
 </template>
 ```
 
-## 猜你喜欢(重点难点)
+## 猜你喜欢(重点难点){#xtx-guess}
 
 **参考效果**
 
@@ -733,7 +739,7 @@ defineProps<{
 
 ![猜你喜欢](assets/home_picture_6.png)
 
-### 准备工作
+**准备工作**
 
 1. 准备组件 (通用组件，多页面使用)
 
@@ -876,7 +882,7 @@ declare module '@vue/runtime-core' {
 export type XtxGuessInstance = InstanceType<typeof XtxGuess>
 ```
 
-### 获取数据
+### 获取数据{#get-goods-guess}
 
 **接口调用**
 
@@ -965,13 +971,13 @@ export type PageParams = {
 }
 ```
 
-### 核心业务
+### 核心业务{#goods-guess-core}
 
 1. 子组件内部获取数据
 2. 父滚动触底需加载分页
 3. 组件通讯，子调父
 
-### 参考代码
+### 参考代码{#goods-guess-code}
 
 项目首页
 
@@ -1080,7 +1086,7 @@ defineExpose({
 </template>
 ```
 
-## 下拉刷新
+## 下拉刷新{#home-refresh}
 
 下拉刷新实际上是在用户操作下拉交互时**重新调用接口**，然后将新获取的数据再次渲染到页面中。
 
@@ -1092,7 +1098,7 @@ defineExpose({
 - 监听 `@refresherrefresh` 事件，判断用户是否执行了下拉操作
 - 配置 `refresher-triggered` 属性，关闭下拉状态
 
-### 参考代码
+### 参考代码{#home-refresh-code}
 
 猜你喜欢组件定义重置数据的方法
 
@@ -1140,7 +1146,7 @@ const onRefresherrefresh = async () => {
 </scroll-view>
 ```
 
-## 骨架屏
+## 骨架屏{#skeleton}
 
 骨架屏是页面的一个空白版本，通常会在页面完全渲染之前，通过一些灰色的区块大致勾勒出轮廓，待数据加载完成后，再替换成真实的内容。
 
