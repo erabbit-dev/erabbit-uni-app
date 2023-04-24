@@ -1,7 +1,16 @@
 import { defineConfig } from 'vitepress'
+import mdItCustomAttrs from 'markdown-it-custom-attrs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  markdown: {
+    config: (md) => {
+      // use more markdown-it plugins!
+      md.use(mdItCustomAttrs, 'image', {
+        'data-fancybox': 'gallery',
+      })
+    },
+  },
   lang: 'zh-CN',
   title: 'uni-app-小兔鲜儿',
   titleTemplate: 'vue3+ts',
@@ -15,6 +24,12 @@ export default defineConfig({
         href: '/favicon.ico',
       },
     ],
+    // use more markdown-it plugins!
+    [
+      'link',
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css' },
+    ],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js' }],
   ],
   themeConfig: {
     logo: '/public/logo.png',
@@ -22,12 +37,12 @@ export default defineConfig({
     returnToTopLabel: '返回顶部',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'uni-app基础', link: '/uni-app/' },
+      { text: 'uni-app', link: '/uni-app/' },
       { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
     ],
 
     sidebar: {
-      '/uni-app/': [{ text: 'uni-app基础', link: '/uni-app/' }],
+      '/uni-app/': [{ text: 'uni-app 核心', link: '/uni-app/' }],
       '/rabbit-shop/': [
         {
           text: '小兔鲜儿项目',

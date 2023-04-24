@@ -8,6 +8,7 @@
     "vitepress": "1.0.0-alpha.73"
   },
   "dependencies": {
+    "markdown-it-custom-attrs": "^1.0.2",
     "vue": "^3.2.47"
   }
 }
