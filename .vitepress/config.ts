@@ -49,7 +49,7 @@ export default defineConfig({
           text: '小兔鲜儿项目',
           items: [
             { text: '1.项目起步', link: '/rabbit-shop/' },
-            { text: '2.首页模块', link: '/rabbit-shop/#2' },
+            { text: '2.首页模块', link: '/rabbit-shop/home' },
             { text: '3.推荐模块', link: '/rabbit-shop/#3' },
             { text: '4.分类模块', link: '/rabbit-shop/#4' },
             { text: '5.详情模块', link: '/rabbit-shop/#5' },
