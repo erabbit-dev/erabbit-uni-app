@@ -379,9 +379,9 @@ const activeIndex = ref(0)
 2. 提取列表的分页参数，用于发送请求
 3. 滚动触底事件，页码累加，数组追加，退出判断等业务和常规分页基本一致
 
-### 完整参考代码
+## 参考代码(总)
 
-script 部分
+热门推荐页
 
 ```vue
 <script setup lang="ts">
@@ -458,11 +458,7 @@ const onScrolltolower = async () => {
   currsubTypes.goodsItems.items.push(...newsubTypes.goodsItems.items)
 }
 </script>
-```
 
-template 部分
-
-```vue
 <template>
   <view class="viewport">
     <!-- 推荐封面图 -->

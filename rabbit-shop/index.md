@@ -43,8 +43,8 @@ pnpm i @dcloudio/uni-ui
   "easycom": {
     "autoscan": true,
     "custom": {
-      // uni-ui 规则如下配置
-      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+      // uni-ui 规则如下配置  // [!code ++]
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue" // [!code ++]
     }
   },
   "pages": [
@@ -65,7 +65,11 @@ pnpm i -D @uni-helper/uni-ui-types
 // tsconfig.json
 {
   "compilerOptions": {
-    "types": ["@dcloudio/types", "@uni-helper/uni-app-types", "@uni-helper/uni-ui-types"]
+    "types": [
+      "@dcloudio/types",
+      "@uni-helper/uni-app-types", // [!code ++]
+      "@uni-helper/uni-ui-types" // [!code ++]
+    ]
   }
 }
 ```
@@ -111,10 +115,10 @@ export const useMemberStore = defineStore(
       // 调整为兼容多端的API
       storage: {
         setItem(key, value) {
-          uni.setStorageSync(key, value)
+          uni.setStorageSync(key, value) // [!code warning]
         },
         getItem(key) {
-          return uni.getStorageSync(key)
+          return uni.getStorageSync(key) // [!code warning]
         },
       },
     },
@@ -354,8 +358,8 @@ pnpm i lint-staged -D
 - 修改 `.husky/pre-commit` 文件
 
 ```diff
-- npm test
-+ pnpm lint-staged
+- npm test  // 删除
++ pnpm lint-staged  // 增加
 ```
 
 到此，你已完成 `husky` + `lint-staged` 的配置。

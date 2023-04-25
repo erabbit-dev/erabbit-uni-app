@@ -412,9 +412,9 @@ const subCategoryList = computed(() => {
 
 ![分类页骨架屏](assets/category_picture_2.png)
 
-### 代码参考
+## 代码参考(总)
 
-分类页
+商品分类页
 
 ```vue{26,30,40,94}
 <script setup lang="ts">
