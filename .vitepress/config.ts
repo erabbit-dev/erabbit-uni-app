@@ -58,7 +58,7 @@ export default defineConfig({
             { text: '2.首页模块', link: '/rabbit-shop/home' },
             { text: '3.推荐模块', link: '/rabbit-shop/hot' },
             { text: '4.分类模块', link: '/rabbit-shop/category' },
-            { text: '5.详情模块', link: '/rabbit-shop/#5' },
+            { text: '5.详情模块', link: '/rabbit-shop/goods' },
             { text: '6.登录模块', link: '/rabbit-shop/#6' },
             { text: '7.地址模块', link: '/rabbit-shop/#7' },
             { text: '8.SKU模块', link: '/rabbit-shop/#8' },
