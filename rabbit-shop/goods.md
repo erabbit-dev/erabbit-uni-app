@@ -2,14 +2,14 @@
 outline: deep
 ---
 
-# 小兔鲜儿 - 商品详情(登录前)
+# 小兔鲜儿 - 商品详情(登录前){#goods}
 
 商品详情页分为两部分讲解：
 
 1. 登录前：展示商品信息，轮播图交互（当前模块）
 2. 登录后：加入购物车，立即购买（SKU 模块）
 
-## 准备工作
+## 准备工作{#prepare}
 
 **参考效果**
 
@@ -438,7 +438,7 @@ page {
 </style>
 ```
 
-### 获取数据
+### 获取数据{#get-goods}
 
 **获取页面参数**
 
@@ -601,7 +601,7 @@ export type AddressItem = {
 
 接下来，将获取到的数据结合模板语法渲染到页面中。
 
-## 轮播图交互
+## 轮播图交互{#banner}
 
 **参考效果**
 
@@ -609,7 +609,7 @@ export type AddressItem = {
 
 ![轮播图交互](assets/goods_picture_2.png)
 
-### 参考代码
+### 参考代码{#banner-code}
 
 商品详情页轮播图交互
 
@@ -648,7 +648,7 @@ const onTapImage = (url: string) => {
 </template>
 ```
 
-## 弹出层交互
+## 弹出层交互{#popup}
 
 **参考效果**
 
@@ -957,7 +957,7 @@ const emit = defineEmits<{
 </template>
 ```
 
-## 骨架屏
+## 骨架屏{#skeleton}
 
 **参考效果**
 
@@ -965,7 +965,7 @@ const emit = defineEmits<{
 
 ![骨架屏](assets/goods_picture_4.png)
 
-## 参考代码(总)
+## 参考代码(总){#goods-code}
 
 商品详情页
 
