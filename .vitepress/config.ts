@@ -39,7 +39,7 @@ export default defineConfig({
     returnToTopLabel: '返回顶部',
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: 'https://gitee.com/Megasu/uni-app-shop-note/edit/master/:path',
       text: '帮我改正',
     },
     lastUpdatedText: '最近更新',
@@ -63,7 +63,7 @@ export default defineConfig({
             { text: '7.用户模块', link: '/rabbit-shop/member' },
             { text: '8.地址模块', link: '/rabbit-shop/address' },
             { text: '9.SKU模块', link: '/rabbit-shop/sku' },
-            { text: '10.购物车模块', link: '/rabbit-shop/#9' },
+            { text: '10.购物车模块', link: '/rabbit-shop/cart' },
             { text: '11.订单模块', link: '/rabbit-shop/#10' },
             { text: '12.项目打包', link: '/rabbit-shop/#11' },
           ],

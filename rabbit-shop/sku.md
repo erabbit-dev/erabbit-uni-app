@@ -66,7 +66,20 @@ Q：为什么插件使用时无需导入？
 
 A：`pages.json` 的 `easycom` 配置中，默认自动扫描 `xxx/xxx.vue` 格式的组件，**实现自动导入**。
 
+Q：为什么组件代码 Git 提交时报错？
+
+A：插件未采用 `eslint` 校验代码，请在插件源文件中添加 `/* eslint-disable */`，禁用 `eslint`。
+
 :::
+
+在 `vk-data-goods-sku-popup.vue` 和 `vk-data-input-number-box.vue` 组件禁用 `eslint`。
+
+```vue{2}
+<script>
+/* eslint-disable */
+// 省略组件源代码
+</script>
+```
 
 ## 插件类型问题{#sku-plugin-problem}
 
