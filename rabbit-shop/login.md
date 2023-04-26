@@ -2,15 +2,15 @@
 outline: deep
 ---
 
-# 小兔鲜儿 - 微信登录
+# 小兔鲜儿 - 微信登录{#login}
 
 涉及知识点：微信授权登录，文件上传，Store 状态管理等。
 
-## 微信登录
+## 微信登录{#wechat-login}
 
 微信小程序的**开放能力**，允许开发者获取微信用户的基本信息（昵称、性别、手机号码等），开发者常用来实现注册/登录的功能。
 
-### 登录方式
+### 登录方式{#login-methods}
 
 常见登录/注册方式：
 
@@ -34,7 +34,7 @@ outline: deep
 
 温馨提示：接口文档中提供练习使用的登录接口，大家可在课后自行完成。
 
-### 静态结构
+### 静态结构{#login-static}
 
 登录页
 
@@ -416,7 +416,7 @@ export const postLoginWxMinSimpleAPI = (phoneNumber: string) => {
 }
 ```
 
-### 用户信息持久化存储
+### 用户信息持久化存储{#pinia-persist}
 
 Pinia 的持久化存储插件在 [项目起步](/rabbit-shop/#pinia-persist) 模块已经搭建完成，现在只需要在用户登录成功后，补充 TS 类型声明并保存用户信息即可。
 

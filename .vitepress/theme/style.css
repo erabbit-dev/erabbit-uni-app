@@ -81,6 +81,6 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
-/* p > img {
-  width: 100%;
-} */
+.vp-doc h4 {
+  font-size: 18px;
+}
