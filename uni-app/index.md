@@ -14,31 +14,31 @@
 
 **1.下载安装 HbuilderX 编辑器**
 
-![下载安装 HbuilderX 编辑器](assets/picture_1.png)
+![下载安装 HbuilderX 编辑器](./assets/uniapp_picture_1.png)
 
 **2.通过 HbuilderX 创建 uni-app vue3 项目**
 
-![通过 HbuilderX 创建 uni-app vue3 项目](assets/picture_2.png)
+![通过 HbuilderX 创建 uni-app vue3 项目](./assets/uniapp_picture_2.png)
 
 **3.安装 uni-app vue3 编译器插件**
 
-![安装 uni-app vue3 编译器插件](assets/picture_3.png)
+![安装 uni-app vue3 编译器插件](./assets/uniapp_picture_3.png)
 
 **4.编译成微信小程序端代码**
 
-![编译成微信小程序端代码](assets/picture_4.png)
+![编译成微信小程序端代码](./assets/uniapp_picture_4.png)
 
 **5.开启服务端口**
 
-![开启服务端口](assets/picture_5.png)
+![开启服务端口](./assets/uniapp_picture_5.png)
 
 **小技巧分享：模拟器窗口分离和置顶**
 
-![模拟器窗口分离和置顶](assets/picture_6.png)
+![模拟器窗口分离和置顶](./assets/uniapp_picture_6.png)
 
 **Hbuildex 和 微信开发者工具 关系**
 
-![Hbuildex 和 微信开发者工具 关系](assets/picture_7.png)
+![Hbuildex 和 微信开发者工具 关系](./assets/uniapp_picture_7.png)
 
 温馨提示：**Hbuildex** 和 **uni-app** 都属于 [DCloud](https://dcloud.io) 公司的产品。
 
@@ -69,7 +69,7 @@
 ### 案例练习
 
 **效果预览**
-![案例练习](assets/case_1.png)
+![案例练习](./assets/uniapp_case_1.png)
 
 **参考代码**
 
@@ -140,7 +140,7 @@ uni-app 项目每个页面是一个 `.vue` 文件，数据绑定及事件处理�
 ### 案例练习
 
 **效果预览**
-![案例练习](assets/case_2.png)
+![案例练习](./assets/uniapp_case_2.png)
 
 **主要功能**
 
@@ -281,10 +281,10 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 选择自己习惯的编辑器开发 uni-app 项目即可。
 
 **VS Code 和 微信开发者工具 关系**
-![VS Code 和 微信开发者工具 关系](assets/picture_8.png)
+![VS Code 和 微信开发者工具 关系](./assets/uniapp_picture_8.png)
 
 **HbuilderX 和 微信开发者工具 关系**
-![HbuilderX 和 微信开发者工具 关系](assets/picture_7.png)
+![HbuilderX 和 微信开发者工具 关系](./assets/uniapp_picture_7.png)
 
 ## 用 VS Code 开发课后练习{#test}
 
