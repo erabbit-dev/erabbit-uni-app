@@ -65,7 +65,7 @@ export default defineConfig({
             { text: '9.SKU模块', link: '/rabbit-shop/sku' },
             { text: '10.购物车模块', link: '/rabbit-shop/cart' },
             { text: '11.订单模块', link: '/rabbit-shop/order' },
-            { text: '12.项目打包', link: '/rabbit-shop/#12' },
+            { text: '12.项目打包', link: '/rabbit-shop/build' },
           ],
         },
       ],
