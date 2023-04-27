@@ -893,7 +893,7 @@ const onTapImage = (url: string) => {
 
 商品详情页：通过组件 `ref` 获取弹出层组件实例，调用打开弹出层方法。
 
-```vue{5-9,17,28,32,38-41}
+```vue {5-9,17,28,32,38-41}
 <script setup lang="ts">
 import AddressPanel from './components/AddressPanel.vue'
 import ServicePanel from './components/ServicePanel.vue'

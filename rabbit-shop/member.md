@@ -276,26 +276,21 @@ export const useGuessList = () => {
 
 会员中心页(我的)：渲染用户头像，昵称，完善猜你喜欢分页加载。
 
-```vue{7,10,18,23,25,29,43}
+```vue {7,10,18,23,25,29,43}
 // src/pages/my/my.vue
 
 <script setup lang="ts">
 import { useMemberStore } from '@/stores'
 
 // 获取会员信息
-const memberStore = useMemberStore()  // [!code ++]
+const memberStore = useMemberStore() // [!code ++]
 
 // 猜你喜欢组合式函数
-const { guessRef, onScrolltolower } = useGuessList()  // [!code ++]
+const { guessRef, onScrolltolower } = useGuessList() // [!code ++]
 </script>
 
 <template>
-  <scroll-view
-    class="viewport"
-    scroll-y
-    enable-back-to-top
-    @scrolltolower="onScrolltolower"
-  >
+  <scroll-view class="viewport" scroll-y enable-back-to-top @scrolltolower="onScrolltolower">
     <!-- 个人资料 -->
     <view class="profile" :style="{ paddingTop: safeAreaInsets!.top + 'px' }">
       <!-- 情况1：已登录 -->
@@ -313,9 +308,7 @@ const { guessRef, onScrolltolower } = useGuessList()  // [!code ++]
         </view>
       </view>
       <!-- 情况2：未登录 -->
-      <view class="overview" v-else>
-        ...省略
-      </view>
+      <view class="overview" v-else> ...省略 </view>
     </view>
     <!-- 猜你喜欢 -->
     <view class="guess">
@@ -335,14 +328,16 @@ const { guessRef, onScrolltolower } = useGuessList()  // [!code ++]
 ![新建分包页面](./assets/member_picture_2.png)
 
 ::: tip 温馨提示
+
 通过 VS Code 插件 [uni-create-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) 可以快速新建分包页面，自动配置分包路由。
+
 :::
 
 ### 分包预下载
 
 当用户进入【我的】页面时，由框架自动预下载【会员模块】的分包，提升进入后续分包页面时的启动速度。
 
-```json{22-27}
+```json {22-27}
 // src/pages.json
 
 {
@@ -364,12 +359,12 @@ const { guessRef, onScrolltolower } = useGuessList()  // [!code ++]
     }
   ],
   // 分包预下载规则
-  "preloadRule": {   // [!code ++]
-    "pages/my/my": {   // [!code ++]
-      "network": "all",   // [!code ++]
-      "packages": ["pagesMember"]   // [!code ++]
-    }   // [!code ++]
-  }   // [!code ++]
+  "preloadRule": {  // [!code ++]
+    "pages/my/my": {  // [!code ++]
+      "network": "all", // [!code ++]
+      "packages": ["pagesMember"] // [!code ++]
+    } // [!code ++]
+  } // [!code ++]
 }
 ```
 
@@ -485,7 +480,7 @@ page {
 
 **参考代码**
 
-```vue{6,15,17,27,43}
+```vue {6,15,17,27,43}
 // src/pagesMember/settings/settings.vue
 
 <script setup lang="ts">
@@ -864,7 +859,7 @@ export type Gender = '女' | '男'
 
 会员信息页
 
-```vue{32,42,46,52,56,66,70,76,77,83}
+```vue {32,42,46,52,56,66,70,76,77,83}
 <script setup lang="ts">
 import { getMemberProfileAPI } from '@/services/profile'
 import type { ProfileDetail } from '@/types/member'
@@ -1097,7 +1092,7 @@ export type ProfileParams = Pick<
 
 `<input>` 组件使用 `v-model` 收集数据，`<radio-group>` 组件使用 `@change` 事件收集数据。
 
-```vue{5,9-11,26,30,44}
+```vue {5,9-11,26,30,44}
 <script setup lang="ts">
 import type { Gender, ProfileDetail } from '@/types/member'
 
@@ -1151,7 +1146,7 @@ const onGenderChange: UniHelper.RadioGroupOnChange = (ev) => {
 
 `<picker>` 组件使用 `@change` 事件收集数据。
 
-```vue{3-5,8-14,26,38}
+```vue {3-5,8-14,26,38}
 <script setup lang="ts">
 // 修改生日
 const onBirthdayChange: UniHelper.DatePickerOnChange = (ev) => {
@@ -1200,7 +1195,7 @@ const onFullLocationChange: UniHelper.RegionPickerOnChange = (ev) => {
 
 提交表单，更新会员信息，Store 昵称记得修改，用于会员中心页展示。
 
-```vue{19}
+```vue {19}
 <script setup lang="ts">
 import { useMemberStore } from '@/stores'
 

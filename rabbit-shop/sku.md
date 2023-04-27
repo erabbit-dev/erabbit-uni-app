@@ -74,7 +74,7 @@ A：插件未采用 `eslint` 校验代码，请在插件源文件中添加 `/* e
 
 在 `vk-data-goods-sku-popup.vue` 和 `vk-data-input-number-box.vue` 组件禁用 `eslint`。
 
-```vue{2}
+```vue {2}
 <script>
 /* eslint-disable */
 // 省略组件源代码
@@ -248,7 +248,7 @@ declare module '@vue/runtime-core' {
 
 **注意**：后端返回的数据格式和插件所需的格式不一致，我们需要按插件要求进行处理。
 
-```vue{9-24,28,30,35,37}
+```vue {9-24,28,30,35,37}
 <script setup lang="ts">
 import type { SkuPopupLocaldata } from '@/components/vk-data-goods-sku-popup/vk-data-goods-sku-popup'
 
@@ -285,7 +285,7 @@ const localdata = ref({} as SkuPopupLocaldata)
   <!-- SKU弹窗组件 -->
   <vk-data-goods-sku-popup v-model="isShowSku" :localdata="localdata" />
   <!-- 弹窗测试 -->
-  <button @tap="isShowSku = true"> 打开 SKU 弹窗 </button>
+  <button @tap="isShowSku = true">打开 SKU 弹窗</button>
 </template>
 ```
 
@@ -293,7 +293,7 @@ const localdata = ref({} as SkuPopupLocaldata)
 
 SKU 弹窗的按钮有三种形式。
 
-```vue{23-25,29,31,32}
+```vue {23-25,29,31,32}
 <script setup lang="ts">
 // 按钮模式
 enum SkuMode {
@@ -335,7 +335,7 @@ const openSkuPopup = (val: SkuMode) => {
 
 2. 通过 `computed` 计算出**被选中的值**，渲染到界面中。
 
-```vue{3,5-7,18-23,29}
+```vue {3,5-7,18-23,29}
 <script setup lang="ts">
 // SKU组件实例
 const skuPopupRef = ref<SkuPopupInstance>()

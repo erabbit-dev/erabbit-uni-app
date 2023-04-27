@@ -412,7 +412,7 @@ export type AddressParams = {
 
 地址表单页，`input` 组件通过 `v-model` 获取数据，其他表单组件结合 `@change` 事件获取。
 
-```vue{24,33-42,51,55,63,71,79,85}
+```vue {24,33-42,51,55,63,71,79,85}
 <script setup lang="ts">
 import { postMemberAddressAPI } from '@/services/address'
 import { ref } from 'vue'
@@ -581,14 +581,16 @@ export type AddressItem = {
 ```
 
 ::: tip 温馨提示
+
 用户登录后再访问**商品详情**，商品详情字段中包含用户收货地址列表，可以**复用收货地址类型**。
+
 :::
 
 ### 参考代码{#address-list-code}
 
 地址管理页
 
-```vue{14-17}
+```vue {14-17}
 <script setup lang="ts">
 import { getMemberAddressAPI } from '@/services/address'
 import type { AddressItem } from '@/types/address'
@@ -766,7 +768,7 @@ export const putMemberAddressByIdAPI = (id: string, data: AddressParams) => {
 
 根据是否有地址 id 来判断提交表单到底是新建地址还是更新地址。
 
-```vue{5-11,13}
+```vue {5-11,13}
 <script setup lang="ts">
 // 提交表单
 const onSubmit = async () => {
@@ -803,7 +805,7 @@ const onSubmit = async () => {
 
 ### 参考代码{#uni-forms-code}
 
-```vue{3-19,51,53,56,57,65,66,77,78,81,91}
+```vue {3-19,51,53,56,57,65,66,77,78,81,91}
 <script setup lang="ts">
 // 定义校验规则
 const rules: UniHelper.UniFormsRules = {
@@ -909,7 +911,7 @@ const onSubmit = async () => {
 
 ### 侧滑组件用法{#uni-swipe-action}
 
-```vue{3,5,9}
+```vue {3,5,9}
 <template>
   <!-- 滑动操作分区 -->
   <uni-swipe-action>
@@ -963,7 +965,7 @@ export const deleteMemberAddressByIdAPI = (id: string) => {
 
 侧滑地址列表项，右侧显示删除按钮，删除地址前需二次确认。
 
-```vue{24,26,42-47}
+```vue {24,26,42-47}
 <script setup lang="ts">
 // 删除收货地址
 const onDeleteAddress = (id: string) => {

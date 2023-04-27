@@ -860,7 +860,7 @@ defineProps<{
 
 **全局组件类型**
 
-```ts{3,8,12,13}
+```ts {3,8,12,13}
 // types/components.d.ts
 import XtxSwiper from '@/components/XtxSwiper.vue'
 import XtxGuess from '@/components/XtxGuess.vue'
@@ -975,7 +975,7 @@ export type PageParams = {
 
 项目首页
 
-```vue{6,9-11,18,21}
+```vue {6,9-11,18,21}
 // pages/index/index.vue
 <script setup lang="ts">
 import type { XtxGuessInstance } from '@/types/components'
@@ -991,10 +991,7 @@ const onScrolltolower = () => {
 
 <template>
   <!-- 滚动容器 -->
-  <scroll-view
-    scroll-y
-    @scrolltolower="onScrolltolower"
-  >
+  <scroll-view scroll-y @scrolltolower="onScrolltolower">
     <!-- 猜你喜欢 -->
     <XtxGuess ref="guessRef" />
   </scroll-view>

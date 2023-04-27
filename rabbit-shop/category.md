@@ -304,7 +304,7 @@ export type CategoryChildItem = {
 
 当用户点击一级分类时，需要高亮显示，即给它添加 `.active` 类名即可。
 
-```vue{8-11,15,19,31-34,36}
+```vue {8-11,15,19,31-34,36}
 <script setup lang="ts">
 import { getCategoryTopAPI } from '@/services/category'
 import type { CategoryTopItem } from '@/types/category'
@@ -354,7 +354,7 @@ onLoad(() => {
 
 ### 参考代码{#sub-category-code}
 
-```vue{7-9}
+```vue {7-9}
 <script setup lang="ts">
 import { computed } from 'vue'
 
@@ -416,7 +416,7 @@ const subCategoryList = computed(() => {
 
 商品分类页
 
-```vue{26,30,40,94}
+```vue {26,30,40,94}
 <script setup lang="ts">
 import { getCategoryTopAPI } from '@/services/category'
 import { getHomeBannerAPI } from '@/services/home'

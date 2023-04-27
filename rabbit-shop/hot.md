@@ -337,7 +337,7 @@ export type SubTypeItem = {
 
 参考代码
 
-```vue{2,3,13,14,25}
+```vue {2,3,13,14,25}
 <script setup lang="ts">
 // 高亮的下标
 const activeIndex = ref(0)

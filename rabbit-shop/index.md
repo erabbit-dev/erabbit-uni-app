@@ -102,7 +102,7 @@ uni.getStorageSync()
 
 **参考代码**
 
-```ts{7-20}
+```ts {7-20}
 // stores/modules/member.ts
 export const useMemberStore = defineStore(
   'member',

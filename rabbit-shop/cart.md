@@ -54,7 +54,7 @@ export const postMemberCartAPI = (data: { skuId: string; count: number }) => {
 
 通过 `SKU` 组件提供的 `add-cart` 事件，获取加入购物车时所需的参数。
 
-```vue{3-7,24}
+```vue {3-7,15}
 <script setup lang="ts">
 // 加入购物车事件
 const onAddCart = async (ev: SkuPopupEvent) => {
@@ -66,20 +66,7 @@ const onAddCart = async (ev: SkuPopupEvent) => {
 
 <template>
   <!-- SKU弹窗组件 -->
-  <vk-data-goods-sku-popup
-    v-model="isShowSku"
-    :localdata="localdata"
-    :mode="mode"
-    add-cart-background-color="#FFA868"
-    buy-now-background-color="#27BA9B"
-    ref="skuPopupRef"
-    :actived-style="{
-      color: '#27BA9B',
-      borderColor: '#27BA9B',
-      backgroundColor: '#E9F8F5',
-    }"
-    @add-cart="onAddCart"
-  />
+  <vk-data-goods-sku-popup v-model="isShowSku" :localdata="localdata" @add-cart="onAddCart" />
 </template>
 ```
 
@@ -480,7 +467,7 @@ const onAddCart = async (ev: SkuPopupEvent) => {
 
 已登录显示购物车列表，否则应引导用户去登录。
 
-```vue{5,11}
+```vue {5,11}
 <script setup lang="ts">
 import { useMemberStore } from '@/stores'
 
@@ -571,7 +558,7 @@ export type CartItem = {
 
 在页面初始化的时候判断用户是否已登录，已登录获取购物车列表。
 
-```vue{21-23}
+```vue {21-23}
 <script setup lang="ts">
 import { getMemberCartAPI } from '@/services/cart'
 import { useMemberStore } from '@/stores'
@@ -592,7 +579,8 @@ const getMemberCartData = async () => {
 // 初始化调用: 页面显示触发
 onShow(() => {
   // 用户已登录才允许调用
-  if (memberStore.profile) {  // [!code ++]
+  if (memberStore.profile) {
+    // [!code ++]
     getMemberCartData()
   } // [!code ++]
 })
@@ -782,7 +770,7 @@ declare module '@vue/runtime-core' {
 
 **参考代码**
 
-```vue{5-7,13-19}
+```vue {5-7,13-19}
 <script setup lang="ts">
 import type { InputNumberBoxEvent } from '@/components/vk-data-input-number-box/vk-data-input-number-box'
 
@@ -851,7 +839,7 @@ export const putMemberCartSelectedAPI = (data: { selected: boolean }) => {
 
 **参考代码**
 
-```vue{5,7,11-13,18,20-22,24,32,37}
+```vue {5,7,11-13,18,20-22,24,32,37}
 <script setup lang="ts">
 // 修改选中状态-单品修改
 const onChangeSelected = (item: CartItem) => {
@@ -899,7 +887,7 @@ const onChangeSelectedAll = () => {
 
 计算并展示购物车中选中商品所要支付的总金额，在用户切换商品选中状态和改变购数量后总的金额也要相应的进行重新计算，要实现这个功能我们仍然借助计算属性来实现：
 
-```vue{4,9,16-16,20-29}
+```vue {4,9,16-16,20-29}
 <script setup lang="ts">
 // 计算选中单品列表
 const selectedCartList = computed(() => {
@@ -937,6 +925,8 @@ const gotoPayment = () => {
 为了解决小程序 [tabBar 页面限制](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html) 导致无法返回上一页的问题，将购物车业务独立为组件，使其既可从底部 tabBar 访问，又可在商品详情页中**跳转并返回**。
 
 这样就需要 **两个购物车页面** 实现该功能，其中一个页面为 tabBar 页，另一个为普通页。
+
+![购物车页](./assets/cart_picture_3.png)
 
 目录结构如下：
 

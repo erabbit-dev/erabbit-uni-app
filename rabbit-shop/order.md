@@ -476,7 +476,7 @@ export const getMemberOrderPreNowAPI = (data: {
 
 **商品详情页**
 
-```vue{4,14}
+```vue {4,14}
 <script setup lang="ts">
 // 立即购买
 const onBuyNow = (ev: SkuPopupEvent) => {
@@ -497,7 +497,7 @@ const onBuyNow = (ev: SkuPopupEvent) => {
 
 **填写订单页**
 
-```vue{5-8,13-21}
+```vue {5-8,13-21}
 <script setup lang="ts">
 import { getMemberOrderPreAPI, getMemberOrderPreNowAPI } from '@/services/order'
 
@@ -557,7 +557,7 @@ export const useAddressStore = defineStore('address', () => {
 
 `pagesMember/address/address.vue`
 
-```vue{4-8,15,26}
+```vue {4-8,15,26}
 <script setup lang="ts">
 // 修改收货地址
 const onChangeAddress = (item: AddressItem) => {
@@ -594,7 +594,7 @@ const onChangeAddress = (item: AddressItem) => {
 
 **订单填写页**
 
-```vue{5,7-9,15,20-21}
+```vue {5,7-9,15,20-21}
 <script setup lang="ts">
 import { useAddressStore } from '@/stores/modules/address'
 import { computed } from 'vue'
@@ -1636,7 +1636,7 @@ export const getMemberOrderRepurchaseByIdAPI = (id: string) => {
 
 订单详情页
 
-```vue{5}
+```vue {5}
 <template>
   <navigator
     class="button"

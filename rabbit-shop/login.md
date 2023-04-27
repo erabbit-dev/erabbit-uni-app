@@ -197,7 +197,7 @@ page {
 
 后端：通过凭证（code）向微信服务器换取用户登录态信息。
 
-```vue{7}
+```vue {7}
 <script setup lang="ts">
 import { onLoad } from '@dcloudio/uni-app'
 
@@ -211,11 +211,15 @@ onLoad(async () => {
 ```
 
 ::: warning 注意
+
 code 的获取**不要**在 getphonenumber 事件回调函数调用，否则可能会出现错误！！！
+
 :::
 
 ::: tip 温馨提示
+
 用户登录态信息，不包含用户昵称、性别、手机号码等信息，作用是用于[后端服务器与微信服务器通讯](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)。
+
 :::
 
 ### 获取手机号码{#get-phonenumber}
@@ -228,7 +232,7 @@ code 的获取**不要**在 getphonenumber 事件回调函数调用，否则可�
 
 后端：解密手机号信息，把手机号和用户登录态关联在一起。
 
-```vue{3-5,13-14}
+```vue {3-5,13-14}
 <script setup lang="ts">
 // 获取用户手机号码
 const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = (ev) => {
@@ -239,11 +243,7 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = (ev) => {
 <template>
   <view class="viewport">
     <view class="login">
-      <button
-        class="button phone"
-        open-type="getPhoneNumber"
-        @getphonenumber="onGetphonenumber"
-      >
+      <button class="button phone" open-type="getPhoneNumber" @getphonenumber="onGetphonenumber">
         <text class="icon icon-phone"></text>
         手机号快捷登录
       </button>
@@ -332,7 +332,7 @@ export type LoginResult = {
 
 小兔鲜儿项目采用常见的 **登录凭证 + 手机号** 实现授权登录。
 
-```vue{10,31,32}
+```vue {10,31,32}
 // src/pages/login/login.vue
 
 <script setup lang="ts">
@@ -352,7 +352,7 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = async (ev) => {
   const encryptedData = ev.detail.encryptedData!
   const iv = ev.detail.iv!
   // 登录请求
-  await postLoginWxMinAPI({code, encryptedData, iv})
+  await postLoginWxMinAPI({ code, encryptedData, iv })
   // 成功提示
   uni.showToast({ icon: 'none', title: '登录成功' })
 }
@@ -361,11 +361,7 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = async (ev) => {
 <template>
   <view class="viewport">
     <view class="login">
-      <button
-        class="button phone"
-        open-type="getPhoneNumber"
-        @getphonenumber="onGetphonenumber"
-      >
+      <button class="button phone" open-type="getPhoneNumber" @getphonenumber="onGetphonenumber">
         <text class="icon icon-phone"></text>
         手机号快捷登录
       </button>
@@ -379,7 +375,9 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = async (ev) => {
 获取手机号功能，**目前针对非个人开发者，且完成了认证的小程序开放**，[详见文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)。
 
 ::: tip 温馨提示
+
 为了更好实现登录后续的业务，后端提供了一个内部测试用的接口，只需要传手机号即可实现快捷登录。
+
 :::
 
 **请求接口**
@@ -424,7 +422,7 @@ Pinia 的持久化存储插件在 [项目起步](/rabbit-shop/#pinia-persist) �
 
 Store
 
-```ts{3,12,15}
+```ts {3,12,15}
 // src/stores/modules/member.ts
 
 import type { LoginResult } from '@/types/member'
@@ -436,10 +434,11 @@ export const useMemberStore = defineStore(
   'member',
   () => {
     // 会员信息
-    const profile = ref<LoginResult>()  // [!code ++]
+    const profile = ref<LoginResult>() // [!code ++]
 
     // 保存会员信息，登录时使用
-    const setProfile = (val: LoginResult) => {  // [!code ++]
+    const setProfile = (val: LoginResult) => {
+      // [!code ++]
       profile.value = val
     }
 
@@ -469,7 +468,7 @@ export const useMemberStore = defineStore(
 
 登录页
 
-```vue{3,30,31}
+```vue {3,30,31}
 <script setup lang="ts">
 import { postLoginWxMinAPI, postLoginWxMinSimpleAPI } from '@/services/login'
 import { useMemberStore } from '@/stores'
@@ -499,8 +498,8 @@ const onGetphonenumberSimple = async () => {
 
 const loginSuccess = (profile: LoginResult) => {
   // 保存会员信息
-  const memberStore = useMemberStore()  // [!code ++]
-  memberStore.setProfile(profile)  // [!code ++]
+  const memberStore = useMemberStore() // [!code ++]
+  memberStore.setProfile(profile) // [!code ++]
   // 成功提示
   uni.showToast({ icon: 'success', title: '登录成功' })
   setTimeout(() => {
