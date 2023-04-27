@@ -10,7 +10,7 @@ outline: deep
 
 **参考效果**：自定义导航栏的样式需要适配不同的机型。
 
-![自定义导航栏](assets/home_picture_1.png)
+![自定义导航栏](./assets/home_picture_1.png)
 
 **操作步骤**
 
@@ -103,7 +103,7 @@ outline: deep
 
 可通过 `uni.getSystemInfoSync()` 获取屏幕边界到安全区的距离。
 
-![安全区域](assets/home_picture_2.png)
+![安全区域](./assets/home_picture_2.png)
 
 ### 核心代码参考{#navbar-code}
 
@@ -146,7 +146,7 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
 
 轮播图组件需要在首页和分类页使用，需要封装成通用组件。
 
-![轮播组件](assets/home_picture_3.png)
+![轮播组件](./assets/home_picture_3.png)
 
 **静态结构**
 
@@ -389,7 +389,7 @@ defineProps<{
 
 **参考效果**
 
-![1677150782440](assets/home_picture_4.png)
+![1677150782440](./assets/home_picture_4.png)
 
 **准备工作**
 
@@ -533,7 +533,7 @@ defineProps<{
 
 **参考效果**
 
-![热门推荐](assets/home_picture_5.png)
+![热门推荐](./assets/home_picture_5.png)
 
 **静态结构**
 
@@ -731,7 +731,7 @@ defineProps<{
 
 猜你喜欢功能，后端根据用户的浏览记录等信息向用户随机推荐的一系列商品，前端负责把商品在**多个页面中展示**。
 
-![猜你喜欢](assets/home_picture_6.png)
+![猜你喜欢](./assets/home_picture_6.png)
 
 **准备工作**
 
@@ -1145,10 +1145,10 @@ const onRefresherrefresh = async () => {
 
 骨架屏作用是缓解用户等待时的焦虑情绪，属于用户体验优化方案。
 
-![骨架屏](assets/home_picture_7.png)
+![骨架屏](./assets/home_picture_7.png)
 
 **生成骨架屏**
 
 微信开发者工具提供了自动生成骨架屏代码的能力，使用时需要把自动生成的 `xxx.skeleton.vue` 和 `xxx.skeleton.wxss` 封装成 `vue` 组件。
 
-![骨架屏](assets/home_picture_8.png)
+![骨架屏](./assets/home_picture_8.png)

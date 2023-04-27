@@ -12,7 +12,7 @@ outline: deep
 
 推荐模块的布局结构是相同的，因此我们可以复用相同的页面及交互，只是所展示的数据不同。
 
-![热门推荐](assets/hot_picture_1.png)
+![热门推荐](./assets/hot_picture_1.png)
 
 **静态结构**
 
@@ -329,7 +329,7 @@ export type SubTypeItem = {
 
 需要根据当前用户选中的 Tabs 加载对应的列表数据。
 
-![Tab 交互](assets/hot_picture_2.png)
+![Tab 交互](./assets/hot_picture_2.png)
 
 ### Tabs 交互基础{#tabs-base}
 

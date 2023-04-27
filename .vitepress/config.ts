@@ -16,7 +16,7 @@ export default defineConfig({
   title: 'uni-app-小兔鲜儿',
   titleTemplate: 'vue3+ts',
   description: '小兔鲜儿小程序项目, vue3+ts+小程序项目实战',
-  base: '/',
+  base: '/uni-app-shop-note/',
   head: [
     [
       'link',

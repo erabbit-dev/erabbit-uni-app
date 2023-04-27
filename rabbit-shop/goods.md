@@ -15,7 +15,7 @@ outline: deep
 
 用户点击商品列表，跳转到对应的商品详情页。
 
-![商品详情](assets/goods_picture_1.png)
+![商品详情](./assets/goods_picture_1.png)
 
 **静态结构**
 
@@ -607,7 +607,7 @@ export type AddressItem = {
 
 当轮播图滑动切换的时候更新**自定义下标**，当图片被点击的时候**大图预览**。
 
-![轮播图交互](assets/goods_picture_2.png)
+![轮播图交互](./assets/goods_picture_2.png)
 
 ### 参考代码{#banner-code}
 
@@ -654,7 +654,7 @@ const onTapImage = (url: string) => {
 
 `uni-ui` 弹出层组件：[uni-popup](https://uniapp.dcloud.net.cn/component/uniui/uni-popup.html)
 
-![弹出层交互](assets/goods_picture_3.png)
+![弹出层交互](./assets/goods_picture_3.png)
 
 **静态结构**
 
@@ -963,7 +963,7 @@ const emit = defineEmits<{
 
 课后练习，大家自主独立完成。
 
-![骨架屏](assets/goods_picture_4.png)
+![骨架屏](./assets/goods_picture_4.png)
 
 ## 参考代码(总){#goods-code}
 

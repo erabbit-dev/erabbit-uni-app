@@ -12,7 +12,7 @@ outline: deep
 
 商品分类页中的广告位，可复用之前定义的轮播图组件 `XtxSwiper`。
 
-![分类页](assets/category_picture_1.png)
+![分类页](./assets/category_picture_1.png)
 
 **静态结构**
 
@@ -410,7 +410,7 @@ const subCategoryList = computed(() => {
 
 实现步骤参考首页的骨架屏。
 
-![分类页骨架屏](assets/category_picture_2.png)
+![分类页骨架屏](./assets/category_picture_2.png)
 
 ## 代码参考(总){#category-code}
 

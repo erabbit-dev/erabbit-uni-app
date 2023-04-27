@@ -8,7 +8,7 @@ outline: deep
 
 ### 项目架构图{#structure-chart}
 
-![项目架构图](assets/index_picture_1.png)
+![项目架构图](./assets/index_picture_1.png)
 
 ## 拉取项目模板代码{#clone-project}
 
@@ -254,7 +254,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
 
 如果没有统一代码风格，团队协作不便于查看代码提交时所做的修改。
 
-![diff](assets/index_picture_2.png)
+![diff](./assets/index_picture_2.png)
 
 ### 统一代码风格{#code-standards-eslint-prettier}
 

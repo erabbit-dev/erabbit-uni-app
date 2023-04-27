@@ -359,8 +359,10 @@ const { guessRef, onScrolltolower } = useGuessList() // [!code ++]
     }
   ],
   // 分包预下载规则
-  "preloadRule": {  // [!code ++]
-    "pages/my/my": {  // [!code ++]
+  "preloadRule": {
+    // [!code ++]
+    "pages/my/my": {
+      // [!code ++]
       "network": "all", // [!code ++]
       "packages": ["pagesMember"] // [!code ++]
     } // [!code ++]
@@ -750,7 +752,7 @@ page {
 
 ### 获取会员信息
 
-需要登录后才能获取用户个人信息，在 [项目起步](http://localhost:5173/rabbit-shop/#uni-request-interceptor) 模块已封装请求拦截器，拦截器中自动添加 `token` ，无需再手动添加。
+需要登录后才能获取用户个人信息，在 [项目起步](/rabbit-shop/#uni-request-interceptor) 模块已封装请求拦截器，拦截器中自动添加 `token` ，无需再手动添加。
 
 **接口调用**
 

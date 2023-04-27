@@ -35,13 +35,13 @@ outline: deep
 
 Q：按照 uni-app 规范开发可保证多平台兼容，但每个平台有自己的一些特性，该如何处理？
 
-A：通过[条件编译](https://uniapp.dcloud.net.cn/tutorial/platform.html#preprocessor)，让代码按条件编译到指定平台。
+A：通过 [条件编译](https://uniapp.dcloud.net.cn/tutorial/platform.html#preprocessor)，让代码按条件编译到指定平台。
 
 :::
 
 ![多端登录](./assets/build_picture_2.png)
 
-**网页端不支持微信平台授权登录等功能**，可通过[条件编译](<(https://uniapp.dcloud.net.cn/tutorial/platform.html#preprocessor)>)，实现不同端渲染不同的登录界面。
+**网页端不支持微信平台授权登录等功能**，可通过 [条件编译](https://uniapp.dcloud.net.cn/tutorial/platform.html#preprocessor)，实现不同端渲染不同的登录界面。
 
 ### 条件编译语法
 

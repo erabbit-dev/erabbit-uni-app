@@ -20,7 +20,7 @@ outline: deep
 
 `SKU` 属于电商常见业务，插件市场有现成的 `SKU` 插件，我们下载并在项目中使用。
 
-![插件市场](assets/sku_picture_1.png)
+![插件市场](./assets/sku_picture_1.png)
 
 ### 下载 SKU 插件{#download-sku-plugin}
 
@@ -28,7 +28,7 @@ outline: deep
 
 **体验地址**
 
-![插件市场](assets/sku_picture_2.png)
+![插件市场](./assets/sku_picture_2.png)
 
 ::: tip 常见问题
 
