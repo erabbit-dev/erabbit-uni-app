@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   lang: 'zh-CN',
-  title: 'uni-app-小兔鲜儿',
+  title: '小兔鲜儿小程序',
   titleTemplate: 'vue3+ts',
   description: '小兔鲜儿小程序项目, vue3+ts+小程序项目实战',
   base: '/uni-app-shop-note/',
@@ -22,7 +22,7 @@ export default defineConfig({
       'link',
       {
         rel: 'icon',
-        href: '/favicon.ico',
+        href: './favicon.ico',
       },
     ],
     // use more markdown-it plugins!
@@ -35,21 +35,33 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     logo: '/public/logo.png',
-    siteTitle: 'uni-app小程序',
+    siteTitle: '小兔鲜儿-小程序',
     returnToTopLabel: '返回顶部',
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
       pattern: 'https://gitee.com/Megasu/uni-app-shop-note/edit/master/:path',
-      text: '帮我改正',
+      text: '帮我修正',
     },
     lastUpdatedText: '最近更新',
     nav: [
       { text: 'uni-app', link: '/uni-app/' },
       { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
+      {
+        text: '接口文档',
+        link: 'https://apifox.com/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/doc-1521513',
+      },
     ],
 
     sidebar: {
-      '/uni-app/': [{ text: 'uni-app 核心', link: '/uni-app/' }],
+      '/uni-app/': [
+        {
+          text: 'uni-app',
+          items: [
+            { text: 'uni-app 核心', link: '/uni-app/' },
+            { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
+          ],
+        },
+      ],
       '/rabbit-shop/': [
         {
           text: '小兔鲜儿项目',

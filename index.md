@@ -3,22 +3,25 @@
 layout: home
 
 hero:
-  name: 'uni-app小程序'
-  #  text: ''
-  tagline: uni-app 项目，使用 vue3、ts、pinia、uni-app、uni-uni 等技术
+  name: 小兔鲜儿-小程序
+  tagline: 采用 UniApp + Vue3 最新技术栈开发，涵盖了微信登录，微信支付，购物车管理，订单管理等功能。
+
   actions:
     - theme: brand
       text: 开始使用
       link: /uni-app/
     - theme: alt
-      text: 源码地址
-      link: https://gitee.com/Megasu/heima-shop-vue3-ts-uniapp
+      text: 项目源码🧑‍💻
+      link: https://gitee.com/Megasu/uniapp-shop-vue3-ts
 
 features:
-  - title: 技术亮点1
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 技术亮点2
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 技术亮点3
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 📦
+    title: 最新技术栈
+    details: 基于 uni-app 多端开发框架，采用 Vue3 + TS + Pinia + UniUi 的最新组合开发，编码符合 Eslint + Prettierrc + Git Hooks 团队规范。
+  - icon: 🛠️
+    title: 最佳的实践
+    details: 组合式API最佳实践，Vue3+TS最佳实践，Pinia状态管理最佳实践，uni-ui 组件库最佳实践，开发主流微信小程序端并打包上线，同时兼容 H5 端。
+  - icon: 🔑
+    title: 最多的业务
+    details: 涵盖了猜你喜欢、热门推荐、商品分类、商品详情、微信登录、用户管理、地址管理、购物车管理、订单管理等功能。包含微信登录，微信支付等业务。
 ---

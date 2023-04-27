@@ -19,7 +19,9 @@ outline: deep
 
 项目打包上线需要使用到多个工具，注意工具之间的职责。
 
-![打包步骤](./assets/build_picture_1.png)
+```sh
+VSCode ----> 微信开发者工具 ----> 微信公众平台
+```
 
 了解：开发者可独立使用 [miniprogram-ci](https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html) 进行小程序代码的上传等操作!
 

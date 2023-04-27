@@ -274,7 +274,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 }
 ```
 
-注意：`vueCompilerOptions` ：原配置`experimentalRuntimeMode`现调整为 `nativeTags`。
+注意：原配置`experimentalRuntimeMode`现调整为 `nativeTags`。
 
 ## 开发工具回顾
 
