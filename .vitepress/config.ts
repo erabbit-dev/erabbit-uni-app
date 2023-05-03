@@ -34,13 +34,13 @@ export default defineConfig({
   ],
   lastUpdated: true,
   themeConfig: {
-    logo: '/public/logo.png',
+    logo: '/logo.png',
     siteTitle: '小兔鲜儿-小程序',
     returnToTopLabel: '返回顶部',
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
       pattern: 'https://gitee.com/Megasu/uni-app-shop-note/edit/master/:path',
-      text: '帮我修正',
+      text: '对本页提出修改建议',
     },
     lastUpdatedText: '最近更新',
     nav: [
