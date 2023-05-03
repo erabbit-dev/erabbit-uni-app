@@ -252,6 +252,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
   - 设置文件关联，把 `manifest.json` 和 `pages.json` 设置为 `jsonc`
 
 ```diff
+// tsconfig.json
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
