@@ -360,13 +360,11 @@ const { guessRef, onScrolltolower } = useGuessList() // [!code ++]
   ],
   // 分包预下载规则
   "preloadRule": {
-    // [!code ++]
     "pages/my/my": {
-      // [!code ++]
       "network": "all", // [!code ++]
       "packages": ["pagesMember"] // [!code ++]
-    } // [!code ++]
-  } // [!code ++]
+    }
+  }
 }
 ```
 
@@ -1030,7 +1028,9 @@ const onAvatarChange = () => {
 
 - 小程序端上传文件用 `wx.uploadFile()`
 
-- 使用 `uni.uploadFile()` 能自动多端兼容。
+- 使用 `uni.uploadFile()` 能自动多端兼容
+
+- 小程序端需配置上传文件[安全域名](https://mp.weixin.qq.com/)
 
 :::
 

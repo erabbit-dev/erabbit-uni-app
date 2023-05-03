@@ -84,3 +84,9 @@
 .vp-doc h4 {
   font-size: 18px;
 }
+
+.home-container {
+  margin: 0 auto;
+  max-width: 1152px;
+  padding: 25px 0;
+}

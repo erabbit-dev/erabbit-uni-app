@@ -580,9 +580,8 @@ const getMemberCartData = async () => {
 onShow(() => {
   // 用户已登录才允许调用
   if (memberStore.profile) {
-    // [!code ++]
     getMemberCartData()
-  } // [!code ++]
+  }
 })
 </script>
 ```

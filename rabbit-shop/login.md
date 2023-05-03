@@ -438,7 +438,6 @@ export const useMemberStore = defineStore(
 
     // 保存会员信息，登录时使用
     const setProfile = (val: LoginResult) => {
-      // [!code ++]
       profile.value = val
     }
 
