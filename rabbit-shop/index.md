@@ -332,9 +332,17 @@ pnpm lint
 
 - 安装并初始化 `husky`
 
-```sh
+::: code-group
+
+```sh [pnpx]
 pnpm dlx husky-init
 ```
+
+```sh [npx]
+npx husky-init
+```
+
+:::
 
 - 安装 `lint-staged`
 
