@@ -2,19 +2,19 @@
 outline: deep
 ---
 
-# 小兔鲜儿 - 项目起步{#bootstrap}
+# 小兔鲜儿 - 项目起步
 
-## 项目架构{#structure}
+## 项目架构
 
-### 项目架构图{#structure-chart}
+### 项目架构图
 
 ![项目架构图](./assets/index_picture_1.png)
 
-## 拉取项目模板代码{#clone-project}
+## 拉取项目模板代码
 
 项目模板包含：目录结构，项目素材，代码风格。
 
-### 模板地址{#clone-command}
+### 模板地址
 
 ```shell
 git clone http://git.itcast.cn/heimaqianduan/erabbit-uni-app-vue3-ts.git heima-shop
@@ -24,9 +24,9 @@ git clone http://git.itcast.cn/heimaqianduan/erabbit-uni-app-vue3-ts.git heima-s
 >
 > - 在 `manifest.json` 中添加微信小程序的 `appid`
 
-## 引入 uni-ui 组件库{#use-uni-ui}
+## 引入 uni-ui 组件库
 
-### 操作步骤{#use-uni-ui-step}
+### 操作步骤
 
 安装 [uni-ui 组件库](https://uniapp.dcloud.net.cn/component/uniui/quickstart.html#npm安装)
 
@@ -74,11 +74,11 @@ pnpm i -D @uni-helper/uni-ui-types
 }
 ```
 
-## 小程序端 Pinia 持久化{#pinia-persist}
+## 小程序端 Pinia 持久化
 
 说明：项目中 Pinia 用法平时完全一致，主要解决持久化插件**兼容性**问题。
 
-### 持久化存储插件{#pinia-persist-plugin}
+### 持久化存储插件
 
 持久化存储插件： [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/config.html#storage)
 
@@ -126,9 +126,9 @@ export const useMemberStore = defineStore(
 )
 ```
 
-## uni.request 请求封装{#uni-request}
+## uni.request 请求封装
 
-### 添加请求和上传文件拦截器{#uni-request-interceptor}
+### 请求和上传文件拦截器
 
 **uniapp 拦截器**： [uni.addInterceptor](https://uniapp.dcloud.net.cn/api/interceptor.html)
 
@@ -174,7 +174,7 @@ uni.addInterceptor('request', httpInterceptor)
 uni.addInterceptor('uploadFile', httpInterceptor)
 ```
 
-### 封装 Promise 请求函数{#uni-request-promise}
+### 封装 Promise 请求函数
 
 **实现步骤**
 
@@ -248,7 +248,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
 }
 ```
 
-## 【拓展】代码规范{#code-standards}
+## 【拓展】代码规范
 
 **为什么需要代码规范**
 
@@ -256,7 +256,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
 
 ![diff](./assets/index_picture_2.png)
 
-### 统一代码风格{#code-standards-eslint-prettier}
+### 统一代码风格
 
 - 安装 `eslint` + `prettier`
 
@@ -328,7 +328,7 @@ pnpm lint
 
 到此，你已完成 `eslint` + `prettier` 的配置。
 
-### Git 工作流规范{#code-standards-git-flow}
+### Git 工作流规范
 
 - 安装并初始化 `husky`
 

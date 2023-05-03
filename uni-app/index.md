@@ -1,6 +1,6 @@
-# uni-app 基础{#base}
+# uni-app 基础
 
-## 创建 uni-app 项目方式{#create-uni-app-methods}
+## 创建 uni-app 项目方式
 
 **uni-app 支持两种方式创建项目：**
 
@@ -8,7 +8,7 @@
 
 2. 通过命令行创建（更推荐）
 
-## 通过 HBuilderX 创建 uni-app 项目{#use-hbuilderx-create}
+## 通过 HBuilderX 创建 uni-app 项目
 
 #### 创建步骤
 
@@ -42,7 +42,7 @@
 
 温馨提示：**Hbuildex** 和 **uni-app** 都属于 [DCloud](https://dcloud.io) 公司的产品。
 
-## pages.json 和 tabBar 案例{#pages-json-and-tabBar}
+## pages.json 和 tabBar 案例
 
 ### 目录结构
 
@@ -119,7 +119,7 @@
 }
 ```
 
-## uni-app 和原生小程序开发区别{#uni-app-difference}
+## uni-app 和原生小程序开发区别
 
 ### 主要区别
 
@@ -208,7 +208,7 @@ export default {
 </style>
 ```
 
-## 命令行创建 uni-app 项目{#use-command-create}
+## 命令行创建 uni-app 项目
 
 **优势**
 
@@ -232,7 +232,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 
 温馨提示: 在 `manifest.json` 文件添加小程序 `appid` 方便真机预览
 
-## 用 VS Code 开发 uni-app 项目{#use-VS-Code-coding}
+## 用 VS Code 开发 uni-app 项目
 
 ### 为什么选择 VS Code？
 
@@ -284,7 +284,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 **HbuilderX 和 微信开发者工具 关系**
 ![HbuilderX 和 微信开发者工具 关系](./assets/uniapp_picture_7.png)
 
-## 用 VS Code 开发课后练习{#test}
+## 用 VS Code 开发课后练习
 
 使用 `VS Code` 编辑器写代码，实现 tabBar 案例 + 轮播图案例。
 

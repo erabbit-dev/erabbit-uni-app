@@ -2,22 +2,22 @@
 outline: deep
 ---
 
-# 小兔鲜儿 - 地址模块{#address}
+# 小兔鲜儿 - 地址模块
 
 - 能够获取不同类型的表单数据
 - 能够动态设置导航栏的标题
 - 能够使用 uni-ui 组件库的组件
 - 能够完成收货地址的增删改查的功能
 
-## 准备工作{#prepare}
+## 准备工作
 
-### 静态结构{#static}
+### 静态结构
 
 地址模块共两个页面：地址管理页，地址表单页 ，划分到会员分包中。
 
 ![picture_31](./assets/address_picture_1.png)
 
-#### 地址管理页{#static-address-list}
+#### 地址管理页
 
 `src/pagesMember/address/address.vue`
 
@@ -187,7 +187,7 @@ page {
 </style>
 ```
 
-#### 地址表单页{#static-address-form}
+#### 地址表单页
 
 `src/pagesMember/address-form/address-form.vue`
 
@@ -315,7 +315,7 @@ page {
 </style>
 ```
 
-### 动态设置标题{#navigation-bar-title}
+### 动态设置标题
 
 **新建地址** 和 **修改地址** 复用同一个地址表单页，需要根据页面参数 `id` 动态设置页面标题。
 
@@ -331,7 +331,7 @@ uni.setNavigationBarTitle({ title: query.id ? '修改地址' : '新建地址' })
 </script>
 ```
 
-## 新建地址页{#address-form-create}
+## 新建地址页
 
 新用户没有收货地址，先完成新建地址，新建成功返回地址管理页。
 
@@ -339,7 +339,7 @@ uni.setNavigationBarTitle({ title: query.id ? '修改地址' : '新建地址' })
 
 ![添加地址](./assets/address_picture_2.png)
 
-### 接口封装{#post-address}
+### 接口封装
 
 **接口调用**
 
@@ -408,7 +408,7 @@ export type AddressParams = {
 }
 ```
 
-### 参考代码{#form-address-create-code}
+### 参考代码
 
 地址表单页，`input` 组件通过 `v-model` 获取数据，其他表单组件结合 `@change` 事件获取。
 
@@ -501,13 +501,13 @@ const onSubmit = async () => {
 </template>
 ```
 
-## 地址管理页{#address-list}
+## 地址管理页
 
 为了能及时看到新建的收货地址，需在 `onShow` 生命周期中获取地址列表数据。
 
 ![地址管理页](./assets/address_picture_3.png)
 
-### 接口调用{#get-address-list}
+### 接口调用
 
 接口地址：/member/address
 
@@ -586,7 +586,7 @@ export type AddressItem = {
 
 :::
 
-### 参考代码{#address-list-code}
+### 参考代码
 
 地址管理页
 
@@ -648,13 +648,13 @@ onShow(() => {
 </template>
 ```
 
-## 修改地址页{#address-form-update}
+## 修改地址页
 
 通过页面参数 `id` 来区分当前是**修改地址**还是**新建地址**。
 
 ![修改地址页](./assets/address_picture_4.png)
 
-### 数据回显{#get-address-form}
+### 数据回显
 
 修改地址之前，需要先实现数据回显，用户再进行有针对性的修改。
 
@@ -715,7 +715,7 @@ onLoad(() => {
 </script>
 ```
 
-### 更新地址{#update-address-form}
+### 更新地址
 
 将用户修改后的地址信息重新发送到服务端进行存储。
 
@@ -790,20 +790,20 @@ const onSubmit = async () => {
 </script>
 ```
 
-## 表单校验{#uni-forms}
+## 表单校验
 
 通过 `uni-ui` 组件库的 [uni-forms](https://uniapp.dcloud.net.cn/component/uniui/uni-swipe-action.html) 组件实现表单校验。
 
 ![表单校验](./assets/address_picture_5.png)
 
-### 操作步骤{#uni-forms-step}
+### 操作步骤
 
 1. 定义校验规则
 2. 修改表单结构
 3. 绑定校验规则
 4. 提交时校验表单
 
-### 参考代码{#uni-forms-code}
+### 参考代码
 
 ```vue {3-19,51,53,56,57,65,66,77,78,81,91}
 <script setup lang="ts">
@@ -903,13 +903,13 @@ const onSubmit = async () => {
 </template>
 ```
 
-## 删除地址{#address-delete}
+## 删除地址
 
 通过 `uni-ui` 组件库的 [uni-swipe-action](https://uniapp.dcloud.net.cn/component/uniui/uni-swipe-action.html) 组件实现侧滑删除。
 
 ![侧滑删除](./assets/address_picture_6.png)
 
-### 侧滑组件用法{#uni-swipe-action}
+### 侧滑组件用法
 
 ```vue {3,5,9}
 <template>
@@ -928,7 +928,7 @@ const onSubmit = async () => {
 </template>
 ```
 
-### 接口封装{#delete-address}
+### 接口封装
 
 **接口详情**
 
@@ -961,7 +961,7 @@ export const deleteMemberAddressByIdAPI = (id: string) => {
 }
 ```
 
-### 参考代码{#address-delete-code}
+### 参考代码
 
 侧滑地址列表项，右侧显示删除按钮，删除地址前需二次确认。
 

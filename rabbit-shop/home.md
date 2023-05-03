@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# 小兔鲜儿 - 首页模块{#home}
+# 小兔鲜儿 - 首页模块
 
 涉及知识点：组件通信、组件自动导入、数据渲染、触底分页加载、下拉刷新等。
 
-## 自定义导航栏{#navbar}
+## 自定义导航栏
 
 **参考效果**：自定义导航栏的样式需要适配不同的机型。
 
@@ -97,7 +97,7 @@ outline: deep
 </style>
 ```
 
-### 安全区域{#safeArea}
+### 安全区域
 
 不同手机的安全区域不同，适配安全区域能防止页面重要内容被遮挡。
 
@@ -105,7 +105,7 @@ outline: deep
 
 ![安全区域](./assets/home_picture_2.png)
 
-### 核心代码参考{#navbar-code}
+### 核心代码参考
 
 自定义导航配置
 
@@ -138,7 +138,7 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
 </template>
 ```
 
-## 通用轮播组件{#XtxSwiper}
+## 通用轮播组件
 
 **参考效果**
 
@@ -282,7 +282,7 @@ declare module '@vue/runtime-core' {
 }
 ```
 
-### 获取数据{#get-home-banner}
+### 获取数据
 
 **接口调用**
 
@@ -341,7 +341,7 @@ export type BannerItem = {
 
 最后，将获得的数据结合模板语法渲染到页面中。
 
-### 参考代码{#xtx-swiper-code}
+### 参考代码
 
 轮播图组件：`src\components\XtxSwiper.vue`
 
@@ -385,7 +385,7 @@ defineProps<{
 </template>
 ```
 
-## 首页分类{#home-category}
+## 首页分类
 
 **参考效果**
 
@@ -454,7 +454,7 @@ defineProps<{
 </style>
 ```
 
-### 获取数据{#get-home-category}
+### 获取数据
 
 **接口调用**
 
@@ -497,7 +497,7 @@ export type CategoryItem = {
 
 最后，将获得的数据结合模板语法渲染到页面中。
 
-### 参考代码{#home-category-code}
+### 参考代码
 
 `src\pages\index\components\CategoryPanel.vue`
 
@@ -527,7 +527,7 @@ defineProps<{
 </template>
 ```
 
-## 热门推荐{#home-hot}
+## 热门推荐
 
 热门推荐功能，后端根据用户的消费习惯等信息向用户推荐的一系列商品，前端负责展示这些商品展示给用户。
 
@@ -624,7 +624,7 @@ defineProps<{
 </style>
 ```
 
-### 获取数据{#get-home-hot}
+### 获取数据
 
 **接口调用**
 
@@ -689,7 +689,7 @@ export const getHomeHotAPI = () => {
 
 最后将获得的数据结合模板语法渲染到页面中。
 
-### 参考代码{#home-hot-code}
+### 参考代码
 
 `src\pages\index\components\HotPanel.vue`
 
@@ -725,7 +725,7 @@ defineProps<{
 </template>
 ```
 
-## 猜你喜欢(重点难点){#xtx-guess}
+## 猜你喜欢(重点难点)
 
 **参考效果**
 
@@ -876,7 +876,7 @@ declare module '@vue/runtime-core' {
 export type XtxGuessInstance = InstanceType<typeof XtxGuess>
 ```
 
-### 获取数据{#get-goods-guess}
+### 获取数据
 
 **接口调用**
 
@@ -965,13 +965,13 @@ export type PageParams = {
 }
 ```
 
-### 核心业务{#goods-guess-core}
+### 核心业务
 
 1. 子组件内部获取数据
 2. 父滚动触底需加载分页
 3. 组件通讯，子调父
 
-### 参考代码{#goods-guess-code}
+### 参考代码
 
 项目首页
 
@@ -1077,7 +1077,7 @@ defineExpose({
 </template>
 ```
 
-## 下拉刷新{#home-refresh}
+## 下拉刷新
 
 下拉刷新实际上是在用户操作下拉交互时**重新调用接口**，然后将新获取的数据再次渲染到页面中。
 
@@ -1089,7 +1089,7 @@ defineExpose({
 - 监听 `@refresherrefresh` 事件，判断用户是否执行了下拉操作
 - 配置 `refresher-triggered` 属性，关闭下拉状态
 
-### 参考代码{#home-refresh-code}
+### 参考代码
 
 猜你喜欢组件定义重置数据的方法
 
@@ -1137,7 +1137,7 @@ const onRefresherrefresh = async () => {
 </scroll-view>
 ```
 
-## 骨架屏{#skeleton}
+## 骨架屏
 
 骨架屏是页面的一个空白版本，通常会在页面完全渲染之前，通过一些灰色的区块大致勾勒出轮廓，待数据加载完成后，再替换成真实的内容。
 

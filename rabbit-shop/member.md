@@ -952,7 +952,7 @@ onLoad(() => {
 </template>
 ```
 
-### 更新会员头像{#update-profile-avatar}
+### 更新会员头像
 
 1. 通过 `uni.chooseMedia()` 读取用户相册的照片或者拍照。
 

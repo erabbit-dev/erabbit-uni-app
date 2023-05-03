@@ -2,15 +2,15 @@
 outline: deep
 ---
 
-# 小兔鲜儿 - 微信登录{#login}
+# 小兔鲜儿 - 微信登录
 
 涉及知识点：微信授权登录，文件上传，Store 状态管理等。
 
-## 微信登录{#wechat-login}
+## 微信登录
 
 微信小程序的**开放能力**，允许开发者获取微信用户的基本信息（昵称、性别、手机号码等），开发者常用来实现注册/登录的功能。
 
-### 登录方式{#login-methods}
+### 登录方式
 
 常见登录/注册方式：
 
@@ -34,7 +34,7 @@ outline: deep
 
 温馨提示：接口文档中提供练习使用的登录接口，大家可在课后自行完成。
 
-### 静态结构{#login-static}
+### 静态结构
 
 登录页
 
@@ -191,7 +191,7 @@ page {
 </style>
 ```
 
-### 获取登录凭证{#get-code}
+### 获取登录凭证
 
 前端：调用 [wx.login()](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.login.html) 接口获取登录凭证（code）。
 
@@ -222,7 +222,7 @@ code 的获取**不要**在 getphonenumber 事件回调函数调用，否则可�
 
 :::
 
-### 获取手机号码{#get-phonenumber}
+### 获取手机号码
 
 出于安全限制，小程序【规定】想获取用户的手机号，必须由用户主动【点击按钮】并【允许申请】才可获取加密的手机号信息。
 
@@ -262,7 +262,7 @@ A：获取手机号功能**目前针对非个人开发者**，所以个人开发
 
 项目提供了[模拟登录 API ](https://apifox.com/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/api-43426851) 用于练习。
 
-### 微信登录接口(生产环境){#get-login-api}
+### 微信登录接口(生产环境)
 
 **接口调用**
 
@@ -370,7 +370,7 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = async (ev) => {
 </template>
 ```
 
-### 模拟手机登录(开发环境){#login-simle}
+### 模拟手机登录(开发环境)
 
 获取手机号功能，**目前针对非个人开发者，且完成了认证的小程序开放**，[详见文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)。
 
@@ -414,7 +414,7 @@ export const postLoginWxMinSimpleAPI = (phoneNumber: string) => {
 }
 ```
 
-### 用户信息持久化存储{#pinia-persist}
+### 用户信息持久化存储
 
 Pinia 的持久化存储插件在 [项目起步](/rabbit-shop/#pinia-persist) 模块已经搭建完成，现在只需要在用户登录成功后，补充 TS 类型声明并保存用户信息即可。
 
