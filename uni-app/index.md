@@ -8,9 +8,9 @@
 
 2. 通过命令行创建（更推荐）
 
-## 通过 HBuilderX 创建 uni-app 项目
+## HBuilderX 创建 uni-app 项目
 
-#### 创建步骤
+### 创建步骤
 
 **1.下载安装 HbuilderX 编辑器**
 
@@ -236,7 +236,7 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 
 ### 为什么选择 VS Code？
 
-- VS Code 对 **TS 类型支持友好**，前端开发者**熟悉的编辑器** 👍
+- VS Code 对 **TS 类型支持友好**，前端开发者**主流的编辑器** 👍
 - HbuilderX 对 TS 类型支持暂不完善，期待官方完善 👀
 
 ### 用 VS Code 开发配置
@@ -288,4 +288,8 @@ npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 
 使用 `VS Code` 编辑器写代码，实现 tabBar 案例 + 轮播图案例。
 
-温馨提示：`VS Code` 可通过快捷键 `Ctrl + i` 唤起代码提示。
+::: tip 温馨提示
+
+`VS Code` 可通过快捷键 `Ctrl + i` 唤起代码提示。
+
+:::
