@@ -7,7 +7,7 @@
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types", "@types/wechat-miniprogram", "@uni-helper/uni-app-types"]
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
