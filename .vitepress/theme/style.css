@@ -8,15 +8,14 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-brand: #27ba9b;
-  --vp-c-brand-light: #2ab99a;
-  --vp-c-brand-lighter: #3abda0;
-  --vp-c-brand-lightest: #46bca2;
-  --vp-c-brand-dark: #219c82;
-  --vp-c-brand-darker: #19735f;
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-lightest: #bcc0ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
 }
-
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */

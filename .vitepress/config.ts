@@ -37,10 +37,22 @@ export default defineConfig({
     logo: '/logo.png',
     siteTitle: '小兔鲜儿-小程序',
     returnToTopLabel: '返回顶部',
+    outline: {
+      label: '目录',
+      level: 'deep',
+    },
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇',
+    },
+    footer: {
+      message: '根据 MIT 许可证发布',
+      copyright: `Copyright © 2022-${new Date().getFullYear()} 黑马程序员`,
+    },
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
       pattern: 'https://gitee.com/Megasu/uni-app-shop-note/edit/master/:path',
-      text: '对本页提出修改建议',
+      text: '在 Gitee 上编辑此页面',
     },
     lastUpdatedText: '最近更新',
     nav: [
@@ -84,9 +96,5 @@ export default defineConfig({
     },
 
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/Megasu/heima-shop-vue3-ts-uniapp' }],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023-present 黑马程序员',
-    },
   },
 })

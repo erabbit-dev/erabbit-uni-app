@@ -1,7 +1,3 @@
----
-outline: deep
----
-
 # 小兔鲜儿 - SKU 模块
 
 学会使用[插件市场](https://ext.dcloud.net.cn/)，下载并使用 `SKU` 组件，实现**商品详情页**规格展示和交互。
