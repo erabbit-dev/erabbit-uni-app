@@ -90,6 +90,7 @@ export default defineConfig({
             { text: '10.购物车模块', link: '/rabbit-shop/cart' },
             { text: '11.订单模块', link: '/rabbit-shop/order' },
             { text: '12.项目打包', link: '/rabbit-shop/build' },
+            { text: '13.解决方案', link: '/rabbit-shop/solution' },
           ],
         },
       ],

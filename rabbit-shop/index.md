@@ -76,7 +76,7 @@ pnpm i -D @uni-helper/uni-ui-types
 
 ### 持久化存储插件
 
-持久化存储插件： [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/config.html#storage)
+持久化存储插件： [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/zh/guide/config.html#storage)
 
 插件默认使用 `localStorage` 实现持久化，小程序端不兼容，需要替换持久化 API。
 
