@@ -22,7 +22,7 @@ export default defineConfig({
       'link',
       {
         rel: 'icon',
-        href: './favicon.ico',
+        href: '/uni-app-shop-note/favicon.ico',
       },
     ],
     // use more markdown-it plugins!

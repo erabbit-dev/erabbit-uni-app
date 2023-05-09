@@ -518,11 +518,11 @@ onReady(() => {
 - [获取系统信息](https://uniapp.dcloud.net.cn/api/system/info.html#getsysteminfosync)
 - [滚动驱动的动画](https://developers.weixin.qq.com/miniprogram/dev/framework/view/animation.html#%E6%BB%9A%E5%8A%A8%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%8A%A8%E7%94%BB)
 
-## 问：如何在 uni-app 项目中进行性能优化？
+## 问：如何在 uni-app 项目中进行代码优化或性能优化？
 
 ### 必答
 
-（总）其实性能优化是一个持续进行的过程，我们的项目主要是做了以下的优化：
+（总）其实代码优化和性能优化是一个持续进行的过程，我们的项目主要是做了以下的优化：
 
 （分）**根据自身理解，选其中几点回答即可，大部分其实在项目中都有体现：**
 
