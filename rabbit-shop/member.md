@@ -1061,7 +1061,7 @@ const onAvatarChange = () => {
  * @param data 请求体参数
  */
 export const putMemberProfileAPI = (data: ProfileParams) => {
-  return http({
+  return http<ProfileDetail>({
     method: 'PUT',
     url: '/member/profile',
     data,
@@ -1202,11 +1202,12 @@ const memberStore = useMemberStore()
 
 // 点击保存提交表单
 const onSubmit = async () => {
-  const { nickname, gender, birthday } = profile.value
+  const { nickname, gender, birthday, profession } = profile.value
   const res = await putMemberProfileAPI({
     nickname,
     gender,
     birthday,
+    profession,
     provinceCode: fullLocationCode[0],
     cityCode: fullLocationCode[1],
     countyCode: fullLocationCode[2],
