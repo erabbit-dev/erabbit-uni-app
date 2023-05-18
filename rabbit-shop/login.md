@@ -256,6 +256,8 @@ A：获取手机号功能**目前针对非个人开发者**，所以个人开发
 
 :::
 
+为方便开发者开发和体验小程序、小游戏的各种能力，开发者可以申请小程序或小游戏的 [测试号](https://developers.weixin.qq.com/miniprogram/dev/devtools/sandbox.html)，并使用此帐号在开发者工具创建项目进行开发测试，以及真机预览体验。申请测试号的过程非常简单。只需访问 [申请地址](https://mp.weixin.qq.com/wxamp/sandbox?doc=1) ，并使用微信扫描二维码，即可获得为自己分配好的小程序和小游戏测试账号。
+
 项目提供了[模拟登录 API ](https://apifox.com/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/api-43426851) 用于练习。
 
 ### 微信登录接口(生产环境)
