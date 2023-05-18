@@ -52,7 +52,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
       pattern: 'https://gitee.com/Megasu/uni-app-shop-note/edit/master/:path',
-      text: '在 Gitee 上编辑此页面',
+      text: '在 Gitee 上编辑此页面 - ✍️期待参与，定期合并',
     },
     lastUpdatedText: '最近更新',
     nav: [

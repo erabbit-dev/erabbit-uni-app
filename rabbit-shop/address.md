@@ -557,7 +557,7 @@ export type AddressItem = {
 }
 ```
 
-商品详情复用地址类型：`src/types/goods.d.ts`
+复用地址类型：`src/types/goods.d.ts`
 
 ```diff
 + import type { AddressItem } from './global'
