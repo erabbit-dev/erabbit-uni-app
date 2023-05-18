@@ -19,7 +19,7 @@
 VSCode ----> 微信开发者工具 ----> 微信公众平台
 ```
 
-了解：开发者可独立使用 [miniprogram-ci](https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html) 进行小程序代码的上传等操作!
+了解：开发者也可独立使用 [miniprogram-ci](https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html) 进行小程序代码的上传等操作。
 
 ::: tip 举一反三
 
