@@ -77,6 +77,8 @@ A：插件未采用 `eslint` 校验代码，请在插件源文件中添加 `/* e
 </script>
 ```
 
+温馨提示: 插件的作者已合并 [PR](https://gitee.com/vk-uni/vk-u-goods-sku-popup/commit/e114364dd7166be5f66f3ee893d8b32efafa417b) ，现在已无需手动添加该注释。
+
 ## 插件类型问题
 
 尽管该插件未采用 TS 开发，但作者提供了详细的[插件文档](https://ext.dcloud.net.cn/plugin?id=2848)，我们可以依据文档为插件添加 TS 类型声明文件，从而提高项目数据校验的安全性。
