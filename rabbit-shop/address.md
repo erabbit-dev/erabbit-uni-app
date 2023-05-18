@@ -788,7 +788,7 @@ const onSubmit = async () => {
 
 ## 表单校验
 
-通过 `uni-ui` 组件库的 [uni-forms](https://uniapp.dcloud.net.cn/component/uniui/uni-swipe-action.html) 组件实现表单校验。
+通过 `uni-ui` 组件库的 [uni-forms](https://uniapp.dcloud.net.cn/component/uniui/uni-forms.html#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8) 组件实现表单校验。
 
 ![表单校验](./assets/address_picture_5.png)
 
