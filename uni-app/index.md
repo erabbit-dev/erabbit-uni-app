@@ -48,7 +48,7 @@
 
 我们先来认识 uni-app 项目的目录结构。
 
-```shell
+```sh
 ├─pages            业务页面文件存放的目录
 │  └─index
 │     └─index.vue  index页面
@@ -218,7 +218,7 @@ export default {
 
 vue3 + ts 版
 
-```shell
+```sh
 npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 ```
 
