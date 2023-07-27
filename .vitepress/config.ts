@@ -52,11 +52,11 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
       pattern: 'https://gitee.com/Megasu/uni-app-shop-note/edit/master/:path',
-      text: '在 Gitee 上编辑此页面 - ✍️期待参与，定期合并',
+      text: '帮我修改',
     },
     lastUpdatedText: '最近更新',
     nav: [
-      { text: 'uni-app', link: '/uni-app/' },
+      { text: 'uni-app 基础', link: '/uni-app/' },
       { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
       {
         text: '接口文档',
@@ -69,7 +69,7 @@ export default defineConfig({
         {
           text: 'uni-app',
           items: [
-            { text: 'uni-app 核心', link: '/uni-app/' },
+            { text: 'uni-app 基础', link: '/uni-app/' },
             { text: '小兔鲜儿项目', link: '/rabbit-shop/' },
           ],
         },

@@ -383,7 +383,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
 
 3. 针对 TS 项目增加 TS 类型校验
 
-   - 安装类型声明文件 `pnpm i -D @types/wechat-miniprogram @uni-helper/uni-app-types`
+   - 安装类型声明文件 `pnpm i -D miniprogram-api-typings @uni-helper/uni-app-types`
    - 配置 `tsconfig.json`
 
 （总） HBuilder 也有它的优点，针对 uni-app 开发的专属功能、内置的调试工具，如果要打包和调试 App 端还要用到 Hbuilder 工具。选择哪一个编辑器写代码取决于开发者的个人喜好和项目需求。
