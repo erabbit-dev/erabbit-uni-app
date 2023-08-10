@@ -58,6 +58,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3080120230428001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3080120230428001",
     "pinia": "^2.0.27",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "vue": "^3.2.45",
     "vue-i18n": "^9.2.2"
   },
@@ -69,7 +70,6 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3080120230428001",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^18.11.9",
-    "miniprogram-api-typings": "^3.9.1",
     "@uni-helper/uni-app-types": "^0.5.7",
     "@uni-helper/uni-ui-types": "0.5.8",
     "@vitejs/plugin-vue": "^3.0.3",
@@ -80,6 +80,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
+    "miniprogram-api-typings": "^3.9.1",
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
     "typescript": "^4.9.3",
