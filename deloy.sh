@@ -18,6 +18,6 @@ git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@gitee.com:<USERNAME>/<REPO>.git master:gh-pages
-git push -f git@gitee.com:Megasu/uni-app-shop-note.git master:gh-pages
+git push -f https://gitee.com/Megasu/uni-app-shop-note.git master:gh-pages
 
 cd -
