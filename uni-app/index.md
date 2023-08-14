@@ -251,17 +251,24 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 
 ### 用 VS Code 开发配置
 
+- 前置工作：安装 Vue3 插件，[点击查看官方文档](https://cn.vuejs.org/guide/typescript/overview.html#ide-support)
+  - 安装 **Vue Language Features (Volar)** ：Vue3 语法提示插件
+  - 安装 **TypeScript Vue Plugin (Volar)** ：Vue3+TS 插件
+  - **工作区禁用** Vue2 的 Vetur 插件(Vue3 插件和 Vue2 冲突)
+  - **工作区禁用** @builtin typescript 插件（禁用后开启 Vue3 的 TS 托管模式）
 - 安装 uni-app 开发插件
   - **uni-create-view** ：快速创建 uni-app 页面
   - **uni-helper uni-app** ：代码提示
   - **uniapp 小程序扩展** ：鼠标悬停查文档
 - TS 类型校验
-  - 安装类型声明文件 `pnpm i -D miniprogram-api-typings @uni-helper/uni-app-types`
+  - 安装 **类型声明文件** `pnpm i -D miniprogram-api-typings @uni-helper/uni-app-types`
   - 配置 `tsconfig.json`
 - JSON 注释问题
   - 设置文件关联，把 `manifest.json` 和 `pages.json` 设置为 `jsonc`
 
-```diff {13,14}
+`tsconfig.json` 参考
+
+```json {11,12,14-17}
 // tsconfig.json
 {
   "extends": "@vue/tsconfig/tsconfig.json",
@@ -272,17 +279,41 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
-    "types": [
-      "@dcloudio/types",
-+     "miniprogram-api-typings",
-+     "@uni-helper/uni-app-types",
-    ]
+    // 添加类型声明文件，"miniprogram-api-typings", "@uni-helper/uni-app-types"
+    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types"]
+  },
+  // vue 编译器类型，校验标签类型
+  "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
 ```
 
-温馨提示：原配置 `experimentalRuntimeMode` 现无需添加。
+**工作区设置参考**
+
+```json
+// .vscode/settings.json
+{
+  // 在保存时格式化文件
+  "editor.formatOnSave": true,
+  // 文件格式化配置
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 配置语言的文件关联
+  "files.associations": {
+    "pages.json": "jsonc", // pages.json 可以写注释
+    "manifest.json": "jsonc" // manifest.json 可以写注释
+  }
+}
+```
+
+**温馨提示**
+
+- 原依赖 `@types/wechat-miniprogram` 现升级为 `miniprogram-api-typings`。
+- 原配置 `experimentalRuntimeMode` 现升级为 `nativeTags`。
+- 这一步处理很关键，否则无法校验组件属性类型。
 
 ## 开发工具回顾
 
