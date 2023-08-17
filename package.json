@@ -58,6 +58,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3081220230802001",
     "@dcloudio/uni-mp-xhs": "3.0.0-alpha-3081220230802001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3081220230802001",
+    "@vue/runtime-core": "^3.3.4",
     "pinia": "^2.0.27",
     "pinia-plugin-persistedstate": "^3.2.0",
     "vue": "^3.2.45",
