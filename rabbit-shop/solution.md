@@ -400,7 +400,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
 
 我们项目的首页，订单详情页，个人信息页，等页面都用到了自定义导航栏，核心步骤如下：
 
-1. 隐藏默认导航栏：在 `pages.json` 文件中按需设置 `navigationBarTextStyle` 为 `"custom"` 。
+1. 隐藏默认导航栏：在 `pages.json` 文件中按需设置 `navigationStyle` 为 `"custom"` 。
 2. 按设计稿要求编写自定义导航栏的结构、样式和脚本。
 3. 封装左上角返回按钮，通过 `getCurrentPages` 获取路由栈，如果路由栈数组长度只有 1，通过 [switchTab](https://uniapp.dcloud.net.cn/api/router#switchtab) 返回首页，其他情况应该是用 [navigateBack](https://uniapp.dcloud.net.cn/api/router#navigateback) 返回上一页。
 4. 最后，还可以根据需要抽离封装成一个通用的组件，预留标题插槽等，方便复用。
