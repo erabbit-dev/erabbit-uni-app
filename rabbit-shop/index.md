@@ -79,7 +79,7 @@ pnpm i -D @uni-helper/uni-ui-types
     // ...
     "types": [
       "@dcloudio/types",
-      "@uni-helper/uni-app-types", // [!code ++]
+      "@uni-helper/uni-app-types",
       "@uni-helper/uni-ui-types" // [!code ++]
     ]
   },
@@ -96,7 +96,7 @@ pnpm i -D @uni-helper/uni-ui-types
 
 ### 持久化存储插件
 
-持久化存储插件： [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/zh/guide/config.html#storage)
+安装持久化存储插件： [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/zh/guide/config.html#storage)
 
 ```sh
 pnpm i pinia-plugin-persistedstate
@@ -236,7 +236,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
       ...options,
       // 响应成功
       success(res) {
-        // 状态码 2xx， axios 就是这样设计的
+        // 状态码 2xx，参考 axios 的设计
         if (res.statusCode >= 200 && res.statusCode < 300) {
           // 2.1 提取核心数据 res.data
           resolve(res.data as Data<T>)
@@ -372,7 +372,7 @@ npx husky-init
 - 安装 `lint-staged`
 
 ```sh
-pnpm i lint-staged -D
+pnpm i -D lint-staged
 ```
 
 - 配置 `package.json`

@@ -50,7 +50,7 @@
 
 我们先来认识 uni-app 项目的目录结构。
 
-```sh
+```sh {1,4,9,10}
 ├─pages            业务页面文件存放的目录
 │  └─index
 │     └─index.vue  index页面
@@ -224,7 +224,7 @@ vue3 + ts 版
 # 通过 npx 从 github 下载
 npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 
-# 通过 git 克隆下载 (备用)
+# 通过 git 克隆下载 (👉国内备用)  // [!code ++]
 git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 ```
 
@@ -251,24 +251,24 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 
 ### 用 VS Code 开发配置
 
-- 前置工作：安装 Vue3 插件，[点击查看官方文档](https://cn.vuejs.org/guide/typescript/overview.html#ide-support)
+- 👉 前置工作：安装 Vue3 插件，[点击查看官方文档](https://cn.vuejs.org/guide/typescript/overview.html#ide-support)
   - 安装 **Vue Language Features (Volar)** ：Vue3 语法提示插件
   - 安装 **TypeScript Vue Plugin (Volar)** ：Vue3+TS 插件
   - **工作区禁用** Vue2 的 Vetur 插件(Vue3 插件和 Vue2 冲突)
   - **工作区禁用** @builtin typescript 插件（禁用后开启 Vue3 的 TS 托管模式）
-- 安装 uni-app 开发插件
+- 👉 安装 uni-app 开发插件
   - **uni-create-view** ：快速创建 uni-app 页面
   - **uni-helper uni-app** ：代码提示
   - **uniapp 小程序扩展** ：鼠标悬停查文档
-- TS 类型校验
+- 👉 TS 类型校验
   - 安装 **类型声明文件** `pnpm i -D miniprogram-api-typings @uni-helper/uni-app-types`
   - 配置 `tsconfig.json`
-- JSON 注释问题
+- 👉 JSON 注释问题
   - 设置文件关联，把 `manifest.json` 和 `pages.json` 设置为 `jsonc`
 
 `tsconfig.json` 参考
 
-```json {11,12,14-17}
+```json {11,12,14-18}
 // tsconfig.json
 {
   "extends": "@vue/tsconfig/tsconfig.json",
