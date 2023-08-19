@@ -481,8 +481,8 @@ onLoad(async () => {
 
 // 获取用户手机号码（企业中写法）
 const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = async (ev) => {
-  const encryptedData = ev.detail!.encryptedData!
-  const iv = ev.detail!.iv!
+  const encryptedData = ev.detail.encryptedData!
+  const iv = ev.detail.iv!
   const res = await postLoginWxMinAPI({ code, encryptedData, iv })
   loginSuccess(res.result)
 }

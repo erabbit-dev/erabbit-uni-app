@@ -76,11 +76,16 @@ pnpm i -D @uni-helper/uni-ui-types
 // tsconfig.json
 {
   "compilerOptions": {
+    // ...
     "types": [
       "@dcloudio/types",
       "@uni-helper/uni-app-types", // [!code ++]
       "@uni-helper/uni-ui-types" // [!code ++]
     ]
+  },
+  // vue 编译器类型，校验标签类型
+  "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"]
   }
 }
 ```
@@ -171,8 +176,8 @@ const httpInterceptor = {
     options.timeout = 10000
     // 3. 添加小程序端请求头标识
     options.header = {
-      ...options.header,
       'source-client': 'miniapp',
+      ...options.header,
     }
     // 4. 添加 token 请求头标识
     const memberStore = useMemberStore()
@@ -387,7 +392,7 @@ pnpm i lint-staged -D
 
 ```diff
 npm test   // [!code --]
-pnpm lint-staged     // [!code ++]
+npm run lint-staged     // [!code ++]
 ```
 
 到此，你已完成 `husky` + `lint-staged` 的配置。
