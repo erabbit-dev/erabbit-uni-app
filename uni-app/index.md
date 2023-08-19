@@ -284,6 +284,7 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
   },
   // vue 编译器类型，校验标签类型
   "vueCompilerOptions": {
+    // 原配置 `experimentalRuntimeMode` 现调整为 `nativeTags`
     "nativeTags": ["block", "component", "template", "slot"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
@@ -311,8 +312,8 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 
 **温馨提示**
 
-- 原依赖 `@types/wechat-miniprogram` 现升级为 `miniprogram-api-typings`。
-- 原配置 `experimentalRuntimeMode` 现升级为 `nativeTags`。
+- 原依赖 `@types/wechat-miniprogram` 现调整为 `miniprogram-api-typings`。
+- 原配置 `experimentalRuntimeMode` 现调整为 `nativeTags`。
 - 这一步处理很关键，否则无法校验组件属性类型。
 
 ## 开发工具回顾

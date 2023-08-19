@@ -228,7 +228,7 @@ export type SkuPopupEvent = SkuPopupSkuItem & {
 }
 
 /** 全局组件类型声明 */
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   export interface GlobalComponents {
     'vk-data-goods-sku-popup': SkuPopup
   }

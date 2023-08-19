@@ -271,7 +271,7 @@ Volor 插件说明：[Vue Language Tools](https://github.com/vuejs/language-tool
 ```ts
 // src/types/components.d.ts
 import XtxSwiper from './XtxSwiper.vue’
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   export interface GlobalComponents {
     XtxSwiper: typeof XtxSwiper
   }
@@ -861,7 +861,7 @@ defineProps<{
 import XtxSwiper from '@/components/XtxSwiper.vue'
 import XtxGuess from '@/components/XtxGuess.vue'
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   export interface GlobalComponents {
     XtxSwiper: typeof XtxSwiper
     XtxGuess: typeof XtxGuess
