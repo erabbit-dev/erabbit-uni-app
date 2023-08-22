@@ -136,7 +136,7 @@ const onAddCart = async (ev: SkuPopupEvent) => {
       <view class="cart-blank" v-else>
         <image src="/static/images/blank_cart.png" class="image" />
         <text class="text">购物车还是空的，快来挑选好货吧</text>
-        <navigator url="/pages/index/index" hover-class="none">
+        <navigator open-type="switchTab" url="/pages/index/index" hover-class="none">
           <button class="button">去首页看看</button>
         </navigator>
       </view>
@@ -371,7 +371,7 @@ const onAddCart = async (ev: SkuPopupEvent) => {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: calc(var(--window-bottom));
+  bottom: var(--window-bottom);
   z-index: 1;
 
   height: 100rpx;
@@ -381,6 +381,7 @@ const onAddCart = async (ev: SkuPopupEvent) => {
   border-top: 1rpx solid #ededed;
   border-bottom: 1rpx solid #ededed;
   background-color: #fff;
+  box-sizing: content-box;
 
   .all {
     margin-left: 25rpx;
@@ -424,17 +425,13 @@ const onAddCart = async (ev: SkuPopupEvent) => {
   }
 
   .button-grounp {
-    position: absolute;
-    right: 10rpx;
-    top: 50%;
-
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
     text-align: center;
     line-height: 72rpx;
     font-size: 13px;
     color: #fff;
-    transform: translateY(-50%);
 
     .button {
       width: 240rpx;
@@ -454,7 +451,6 @@ const onAddCart = async (ev: SkuPopupEvent) => {
 // 底部占位空盒子
 .toolbar-height {
   height: 100rpx;
-  box-sizing: content-box;
 }
 </style>
 ```

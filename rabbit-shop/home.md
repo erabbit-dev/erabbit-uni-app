@@ -54,6 +54,7 @@
     align-items: center;
     height: 64rpx;
     padding-left: 30rpx;
+    padding-top: 20rpx;
     .logo-image {
       width: 166rpx;
       height: 39rpx;
