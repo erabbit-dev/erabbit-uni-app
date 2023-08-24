@@ -227,6 +227,10 @@ page {
   .preview {
     height: 750rpx;
     position: relative;
+    .image {
+      width: 750rpx;
+      height: 750rpx;
+    }
     .indicator {
       height: 40rpx;
       padding: 0 24rpx;
@@ -318,6 +322,9 @@ page {
   padding-left: 20rpx;
   .content {
     margin-left: -20rpx;
+    .image {
+      width: 100%;
+    }
   }
   .properties {
     padding: 0 20rpx;
@@ -341,21 +348,20 @@ page {
 
 /* 同类推荐 */
 .similar {
-  padding-left: 20rpx;
   .content {
-    padding: 0 20rpx 20rpx;
-    margin-left: -20rpx;
+    padding: 0 20rpx 200rpx;
     background-color: #f4f4f4;
-    overflow: hidden;
-    navigator {
-      width: 345rpx;
+    display: flex;
+    flex-wrap: wrap;
+    .goods {
+      width: 340rpx;
       padding: 24rpx 20rpx 20rpx;
-      margin: 20rpx 20rpx 0 0;
+      margin: 20rpx 7rpx;
       border-radius: 10rpx;
       background-color: #fff;
-      float: left;
     }
     .image {
+      width: 300rpx;
       height: 260rpx;
     }
     .name {
@@ -383,9 +389,14 @@ page {
 
 /* 底部工具栏 */
 .toolbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   background-color: #fff;
   height: 100rpx;
-  padding: 0 20rpx;
+  padding: 0 20rpx var(--window-bottom);
   border-top: 1rpx solid #eaeaea;
   display: flex;
   justify-content: space-between;
@@ -404,7 +415,8 @@ page {
     .addcart {
       background-color: #ffa868;
     }
-    .buynow {
+    .buynow,
+    .payment {
       background-color: #27ba9b;
       margin-left: 20rpx;
     }
@@ -424,6 +436,9 @@ page {
       font-size: 20rpx;
       color: #333;
       background-color: #fff;
+      &::after {
+        border: none;
+      }
     }
     text {
       display: block;
