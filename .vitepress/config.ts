@@ -96,6 +96,13 @@ export default defineConfig({
       ],
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://gitee.com/Megasu/heima-shop-vue3-ts-uniapp' }],
+    socialLinks: [
+      {
+        icon: 'youtube',
+        link: 'https://www.bilibili.com/video/BV1Bp4y1379L/?share_source=copy_web&vd_source=2ac50d29193927b3c8597537dc4bc81d',
+      },
+      { icon: 'github', link: 'https://github.com/erabbit-dev/erabbit-uni-app/' },
+      { icon: 'github', link: 'https://gitee.com/Megasu/uniapp-shop-vue3-ts/' },
+    ],
   },
 })
