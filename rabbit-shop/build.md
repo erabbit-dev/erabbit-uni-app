@@ -45,7 +45,9 @@ A：通过 [条件编译](https://uniapp.dcloud.net.cn/tutorial/platform.html#pr
 
 通过特殊注释，以 **`#ifdef`** 或 **`#ifndef`** 加 **平台名称** 开头，以 **`#endif`** 结尾。
 
-条件编译支持: vue, ts, js, scss, css, pages.json 等文件。
+多平台编译：**`#ifdef H5 || MP-WEIXIN`** 表示在 **H5 端 或 微信小程序端** 代码。
+
+条件编译支持: 支持 .vue, .ts, .js, .scss, .css, pages.json 等文件。
 
 ```vue {3,6,11,15,21,23}
 <script setup lang="ts">
@@ -75,11 +77,9 @@ page {
 </style>
 ```
 
-了解：`#ifdef H5 || MP-WEIXIN` 表示在 H5 平台 **或** 微信小程序平台存在的代码。
-
 ::: tip 开发技巧
 
-可通过搜索 `wx.` 和 `open-type` 等平台关键词，快速查找需要添加编译模式的代码。
+可通过搜索 `wx.` 和 `open-type` 等平台关键词，快速查找需要**小程序端**需添加编译模式的代码。
 
 :::
 
