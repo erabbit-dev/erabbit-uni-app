@@ -4,11 +4,9 @@
 
 **uni-app 支持两种方式创建项目：**
 
-1. 通过 HBuilderX 创建
+1. 通过 HBuilderX 创建（需安装 HBuilderX 编辑器）
 
-2. 通过命令行创建
-
-其中，方式 1 需安装 HBuilderX 编辑器，方式 2 需安装 Node.js 环境。
+2. 通过命令行创建（需安装 NodeJS 环境）
 
 ## HBuilderX 创建 uni-app 项目
 
@@ -123,7 +121,7 @@
 
 ## uni-app 和原生小程序开发区别
 
-### 主要区别
+### 开发区别
 
 uni-app 项目每个页面是一个 `.vue` 文件，数据绑定及事件处理同 `Vue.js` 规范：
 
@@ -135,8 +133,8 @@ uni-app 项目每个页面是一个 `.vue` 文件，数据绑定及事件处理�
 
 ### 其他区别补充
 
-1. 调用接口能力，**建议前缀** `wx` 替换为 `uni` ，养成好习惯，支持多端开发。
-2. `<style>` 页面样式不需要写 `scoped`，小程序是多页面应用，不同页面的样式自带隔离。
+1. 调用接口能力，**建议前缀** `wx` 替换为 `uni` ，养成好习惯，**支持多端开发**。
+2. `<style>` 页面样式不需要写 `scoped`，小程序是多页面应用，**页面样式自动隔离**。
 3. **生命周期分三部分**：应用生命周期(小程序)，页面生命周期(小程序)，组件生命周期(Vue)
 
 ### 案例练习
@@ -220,11 +218,11 @@ export default {
 
 vue3 + ts 版
 
-```sh
+```sh {4,5}
 # 通过 npx 从 github 下载
 npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 
-# 通过 git 克隆下载 (👉国内备用)  // [!code ++]
+# 通过 git 克隆下载 (👉国内备用)
 git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 ```
 
@@ -238,9 +236,10 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 
 温馨提示:
 
-- 在 `manifest.json` 文件添加小程序 `appid` 方便真机预览
-- `npx` 命令需依赖 Node.js 环境，[Node.js 下载地址](https://nodejs.org/zh-cn)
-- `npx` 命令下载失败，请尝试换成手机热点后重试
+- `npx` 命令下载失败，请尝试换成**手机热点重试**
+- 换手机热点依旧失败，请尝试从**国内备用地址下载**
+- 在 `manifest.json` 文件添加 **小程序 AppID** 用于真机预览
+- `npx` 命令需依赖 **NodeJS 环境**，[NodeJS 下载地址](https://nodejs.org/zh-cn)
 
 ## 用 VS Code 开发 uni-app 项目
 
@@ -310,11 +309,14 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 }
 ```
 
-**温馨提示**
+::: tip 温馨提示
 
 - 原依赖 `@types/wechat-miniprogram` 现调整为 `miniprogram-api-typings`。
 - 原配置 `experimentalRuntimeMode` 现调整为 `nativeTags`。
-- 这一步处理很关键，否则无法校验组件属性类型。
+
+:::
+
+这一步处理很关键，否则 TS 项目无法校验组件属性类型。
 
 ## 开发工具回顾
 

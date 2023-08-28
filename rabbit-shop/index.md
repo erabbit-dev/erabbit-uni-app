@@ -92,7 +92,7 @@ pnpm i -D @uni-helper/uni-ui-types
 
 ## 小程序端 Pinia 持久化
 
-说明：项目中 Pinia 用法平时完全一致，主要解决持久化插件**兼容性**问题。
+说明：`Pinia` 用法与 `Vue3` 项目完全一致，`uni-app` 项目仅需解决**持久化插件兼容性**问题。
 
 ### 持久化存储插件
 
@@ -103,6 +103,80 @@ pnpm i pinia-plugin-persistedstate
 ```
 
 插件默认使用 `localStorage` 实现持久化，小程序端不兼容，需要替换持久化 API。
+
+### 基本用法
+
+::: code-group
+
+```ts {28-31} [stores/modules/member.ts]
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
+
+// 定义 Store
+export const useMemberStore = defineStore(
+  'member',
+  () => {
+    // 会员信息
+    const profile = ref<any>()
+
+    // 保存会员信息，登录时使用
+    const setProfile = (val: any) => {
+      profile.value = val
+    }
+
+    // 清理会员信息，退出时使用
+    const clearProfile = () => {
+      profile.value = undefined
+    }
+
+    // 记得 return
+    return {
+      profile,
+      setProfile,
+      clearProfile,
+    }
+  },
+  // TODO: 持久化
+  {
+    persist: true,
+  },
+)
+```
+
+```ts {2,7} [stores/index.ts]
+import { createPinia } from 'pinia'
+import persist from 'pinia-plugin-persistedstate'
+
+// 创建 pinia 实例
+const pinia = createPinia()
+// 使用持久化存储插件
+pinia.use(persist)
+
+// 默认导出，给 main.ts 使用
+export default pinia
+
+// 模块统一导出
+export * from './modules/member'
+```
+
+```ts {2,8} [main.ts]
+import { createSSRApp } from 'vue'
+import pinia from './stores'
+
+import App from './App.vue'
+export function createApp() {
+  const app = createSSRApp(App)
+
+  app.use(pinia)
+  return {
+    app,
+  }
+}
+```
+
+:::
+
+### 多端兼容
 
 **网页端持久化 API**
 
@@ -154,17 +228,21 @@ export const useMemberStore = defineStore(
 
 **接口说明**：[接口文档](https://www.apifox.cn/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/doc-1521513)
 
-**实现步骤**
+::: tip 实现需求
 
-1. 基础地址
-2. 超时时间
-3. 请求头标识
+1. 拼接基础地址
+2. 设置超时时间
+3. 添加请求头标识
 4. 添加 token
+   :::
 
 **参考代码**
 
 ```ts
 // src/utils/http.ts
+
+const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net'
+
 const httpInterceptor = {
   // 拦截前触发
   invoke(options: UniApp.RequestOptions) {
@@ -194,11 +272,19 @@ uni.addInterceptor('request', httpInterceptor)
 uni.addInterceptor('uploadFile', httpInterceptor)
 ```
 
+::: tip 温馨提示
+
+微信小程序端，需登录 [微信公众平台](https://mp.weixin.qq.com) 配置合法域名
+
+`https://pcapi-xiaotuxian-front-devtest.itheima.net`
+
+:::
+
 ### 封装 Promise 请求函数
 
-**实现步骤**
+::: tip 实现需求
 
-1. 返回 Promise 对象
+1. 返回 Promise 对象，用于处理返回值类型
 2. 成功 resolve
    1. 提取数据
    2. 添加泛型
@@ -207,6 +293,8 @@ uni.addInterceptor('uploadFile', httpInterceptor)
    2. 其他错误
    3. 网络错误
 
+:::
+
 **参考代码**
 
 ```ts
@@ -214,7 +302,7 @@ uni.addInterceptor('uploadFile', httpInterceptor)
  * 请求函数
  * @param  UniApp.RequestOptions
  * @returns Promise
- *  1. 返回 Promise 对象
+ *  1. 返回 Promise 对象，用于处理返回值类型
  *  2. 获取数据成功
  *    2.1 提取核心数据 res.data
  *    2.2 添加类型，支持泛型
@@ -351,7 +439,9 @@ module.exports = {
 pnpm lint
 ```
 
+::: tip 温馨提示
 到此，你已完成 `eslint` + `prettier` 的配置。
+:::
 
 ### Git 工作流规范
 
@@ -395,4 +485,6 @@ npm test   // [!code --]
 npm run lint-staged     // [!code ++]
 ```
 
+::: tip 温馨提示
 到此，你已完成 `husky` + `lint-staged` 的配置。
+:::
