@@ -253,7 +253,7 @@ page {
     display: flex;
     align-items: center;
     min-height: 96rpx;
-    padding: 25rpx 10rpx;
+    padding: 25rpx 10rpx 40rpx;
     background-color: #fff;
     font-size: 28rpx;
     border-bottom: 1rpx solid #ddd;
