@@ -36,11 +36,13 @@
 
 ![模拟器窗口分离和置顶](./assets/uniapp_picture_6.png)
 
-**Hbuildex 和 微信开发者工具 关系**
+**HBuildeX 和 微信开发者工具 关系**
 
-![Hbuildex 和 微信开发者工具 关系](./assets/uniapp_picture_7.png)
+![HBuildeX 和 微信开发者工具 关系](./assets/uniapp_picture_7.png)
 
-温馨提示：**Hbuildex** 和 **uni-app** 都属于 [DCloud](https://dcloud.io) 公司的产品。
+::: tip 温馨提示
+[HBuildeX](https://www.dcloud.io/hbuilderx.html) 和 [uni-app](https://uniapp.dcloud.net.cn/) 都属于 [DCloud](https://dcloud.io) 公司的产品。
+:::
 
 ## pages.json 和 tabBar 案例
 
@@ -218,15 +220,31 @@ export default {
 
 vue3 + ts 版
 
-```sh {4,5}
+::: code-group
+
+```sh [github]
 # 通过 npx 从 github 下载
 npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
+```
 
-# 通过 git 克隆下载 (👉国内备用)
+```sh [gitee]
+# 通过 git 从 gitee 克隆下载 (👉备用地址)
 git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 ```
 
+:::
+
 创建其他版本可查看：[uni-app 官网](https://uniapp.dcloud.net.cn/quickstart-cli.html)
+
+::: danger 常见问题
+
+- 运行 `npx` 命令下载失败，请尝试换成**手机热点重试**
+- 换手机热点依旧失败，请尝试从[国内备用地址下载](https://gitee.com/dcloud/uni-preset-vue/tree/vite-ts/)
+- 在 `manifest.json` 文件添加 [小程序 AppID](https://mp.weixin.qq.com/) 用于真机预览
+- 运行 `npx` 命令需依赖 NodeJS 环境，[NodeJS 下载地址](https://nodejs.org/zh-cn)
+- 运行 `git` 命令需依赖 Git 环境，[Git 下载地址](https://git-scm.com/download/)
+
+:::
 
 ### 编译和运行 uni-app 项目
 
@@ -234,12 +252,9 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 2. 编译成微信小程序 `pnpm dev:mp-weixin`
 3. 导入微信开发者工具
 
-温馨提示:
-
-- `npx` 命令下载失败，请尝试换成**手机热点重试**
-- 换手机热点依旧失败，请尝试从**国内备用地址下载**
-- 在 `manifest.json` 文件添加 **小程序 AppID** 用于真机预览
-- `npx` 命令需依赖 **NodeJS 环境**，[NodeJS 下载地址](https://nodejs.org/zh-cn)
+::: tip 温馨提示
+编译成 H5 端可运行 `pnpm dev:h5` 通过浏览器预览项目。
+:::
 
 ## 用 VS Code 开发 uni-app 项目
 
@@ -267,7 +282,7 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 
 `tsconfig.json` 参考
 
-```json {11,12,14-18}
+```json {11,12,14-15,18-22}
 // tsconfig.json
 {
   "extends": "@vue/tsconfig/tsconfig.json",
@@ -278,13 +293,18 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
-    // 添加类型声明文件，"miniprogram-api-typings", "@uni-helper/uni-app-types"
-    "types": ["@dcloudio/types", "miniprogram-api-typings", "@uni-helper/uni-app-types"]
+    // 类型声明文件
+    "types": [
+      "@dcloudio/types", // uni-app API 类型
+      "miniprogram-api-typings", // 原生微信小程序类型
+      "@uni-helper/uni-app-types" // uni-app 组件类型
+    ]
   },
   // vue 编译器类型，校验标签类型
   "vueCompilerOptions": {
     // 原配置 `experimentalRuntimeMode` 现调整为 `nativeTags`
-    "nativeTags": ["block", "component", "template", "slot"]
+    "nativeTags": ["block", "component", "template", "slot"], // [!code ++]
+    "experimentalRuntimeMode": "runtime-uni-app" // [!code --]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
@@ -309,9 +329,9 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 }
 ```
 
-::: tip 温馨提示
+::: danger 版本升级
 
-- 原依赖 `@types/wechat-miniprogram` 现调整为 `miniprogram-api-typings`。
+- 原依赖 `@types/wechat-miniprogram` 现调整为 [miniprogram-api-typings](https://github.com/wechat-miniprogram/api-typings)。
 - 原配置 `experimentalRuntimeMode` 现调整为 `nativeTags`。
 
 :::
