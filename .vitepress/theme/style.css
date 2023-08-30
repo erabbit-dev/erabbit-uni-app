@@ -89,3 +89,7 @@
   max-width: 1152px;
   padding: 25px 0;
 }
+
+.vp-doc .custom-block a {
+  text-decoration: underline;
+}

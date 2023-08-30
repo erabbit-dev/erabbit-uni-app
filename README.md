@@ -180,5 +180,5 @@ npm run dev:h5
 ├── index.html                 # H5 端首页
 ├── package.json               # package.json 依赖
 ├── tsconfig.json              # typescript 配置
-└── vite.config.ts             # vue-cli 配置
+└── vite.config.ts             # vite 配置
 ```
