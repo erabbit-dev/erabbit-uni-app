@@ -300,7 +300,7 @@ export type CategoryChildItem = {
 
 当用户点击一级分类时，需要高亮显示，即给它添加 `.active` 类名即可。
 
-```vue {8-11,15,19,31-34,36}
+```vue {8-12,15,19,31-34,36}
 <script setup lang="ts">
 import { getCategoryTopAPI } from '@/services/category'
 import type { CategoryTopItem } from '@/types/category'
