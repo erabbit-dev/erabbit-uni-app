@@ -8,13 +8,13 @@
 
 ![自定义导航栏](./assets/home_picture_1.png)
 
-**操作步骤**
+::: tip 操作步骤
 
-1. 准备组件
-
-2. 隐藏默认导航栏，修改文字颜色
-
+1. 准备组件静态结构
+2. 修改页面配置，隐藏默认导航栏，修改文字颜色
 3. 样式适配 -> 安全区域
+
+:::
 
 **静态结构**
 
@@ -267,7 +267,7 @@ const activeIndex = ref(0)
 
 **全局组件类型声明**
 
-Volor 插件说明：[Vue Language Tools](https://github.com/vuejs/language-tools)
+Volar 插件说明：[Vue Language Tools](https://github.com/vuejs/language-tools)
 
 ```ts
 // src/types/components.d.ts
@@ -278,6 +278,10 @@ declare module 'vue' {
   }
 }
 ```
+
+::: danger 版本升级
+新版 [Volar](https://github.com/vuejs/language-tools) 把 `declare module '@vue/runtime-core'` 调整为 `declare module 'vue'`
+:::
 
 ### 获取数据
 
