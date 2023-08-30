@@ -272,7 +272,7 @@ export const useGuessList = () => {
 
 会员中心页(我的)：渲染用户头像，昵称，完善猜你喜欢分页加载。
 
-```vue {7,10,18,23,25,29,43}
+```vue {7,10,14,18,24,32,36}
 // src/pages/my/my.vue
 
 <script setup lang="ts">
@@ -1022,9 +1022,9 @@ const onAvatarChange = () => {
 
 - 网页端上传文件用 `Axios + FormData`
 
-- 小程序端上传文件用 `wx.uploadFile()`
+- 小程序端上传文件用 [wx.uploadFile()](https://developers.weixin.qq.com/miniprogram/dev/api/network/upload/wx.uploadFile.html)
 
-- 使用 `uni.uploadFile()` 能自动多端兼容
+- 使用 [uni.uploadFile()](https://uniapp.dcloud.net.cn/api/request/network-file.html#uploadfile) 能自动多端兼容
 
 - 小程序端需配置上传文件[安全域名](https://mp.weixin.qq.com/)
 
