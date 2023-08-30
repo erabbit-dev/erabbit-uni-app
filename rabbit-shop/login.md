@@ -208,7 +208,7 @@ page {
 
 前端：调用 [wx.login()](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.login.html) 接口获取登录凭证（code）。
 
-后端：通过凭证（code）向微信服务器换取用户登录态信息。
+后端：通过凭证（code）向微信服务器生成[用户登录态](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)。
 
 ```vue {7}
 <script setup lang="ts">
@@ -225,13 +225,9 @@ onLoad(async () => {
 
 ::: warning 注意
 
-code 的获取**不要**在 getphonenumber 事件回调函数调用，否则可能会出现错误！！！
+- code 获取**不要**在 getphonenumber 事件回调函数调用，否则可能会出现错误！！！
 
-:::
-
-::: tip 温馨提示
-
-用户登录态信息，不包含用户昵称、性别、手机号码等信息，作用是用于[后端服务器与微信服务器通讯](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)。
+- 用户登录态，不包含用户昵称、性别、手机号码等信息，作用是用于[后端与微信服务器通讯](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)。
 
 :::
 
@@ -239,13 +235,15 @@ code 的获取**不要**在 getphonenumber 事件回调函数调用，否则可�
 
 出于安全限制，小程序【规定】想获取用户的手机号，必须由用户主动【点击按钮】并【允许申请】才可获取加密的手机号信息。
 
+**前端**：提供 `open-type` 按钮，在事件处理函数中获取加密的手机号信息。
+
+**后端**：解密手机号信息，把手机号和用户登录态关联在一起。
+
 ![授权登录](./assets/login_picture_3.png)
 
-前端：提供 `open-type` 按钮，在事件处理函数中获取加密的手机号信息。
+**参考代码**
 
-后端：解密手机号信息，把手机号和用户登录态关联在一起。
-
-```vue {3-5,13-14}
+```vue {3-5,11-14}
 <script setup lang="ts">
 // 获取用户手机号码
 const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = (ev) => {
@@ -265,19 +263,23 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = (ev) => {
 </template>
 ```
 
-::: warning 常见问题：
+::: danger 常见问题
 
 Q：为什么我无法唤起获取手机号的界面？
 
-A：获取手机号功能**目前针对非个人开发者**，所以个人开发者无法唤起获取手机号界面，[详见文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)。
+A：获取手机号功能**目前针对非个人开发者**，所以个人开发者无法唤起获取手机号界面 [详见文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)。
 
 :::
 
-为方便开发者开发和体验小程序、小游戏的各种能力，开发者可以申请小程序或小游戏的 [测试号](https://developers.weixin.qq.com/miniprogram/dev/devtools/sandbox.html)，并使用此帐号在开发者工具创建项目进行开发测试，以及真机预览体验。申请测试号的过程非常简单。只需访问 [申请地址](https://mp.weixin.qq.com/wxamp/sandbox?doc=1) ，并使用微信扫描二维码，即可获得为自己分配好的小程序和小游戏测试账号。
+::: tip 温馨提示
 
-项目提供了[模拟登录 API ](https://apifox.com/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/api-43426851) 用于练习。
+- 项目提供了[模拟登录 API ](https://apifox.com/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/api-43426851) 用于练习，模拟手机号一键登录，请看后续章节。
+
+:::
 
 ### 微信登录接口(生产环境)
+
+获取手机号功能，**目前针对非个人开发者，且完成了认证的小程序开放**，[详见文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html)。
 
 **接口调用**
 
@@ -347,7 +349,7 @@ export type LoginResult = {
 
 小兔鲜儿项目采用常见的 **登录凭证 + 手机号** 实现授权登录。
 
-```vue {10,31,32}
+```vue {10,15-23,29-32}
 // src/pages/login/login.vue
 
 <script setup lang="ts">
@@ -391,7 +393,7 @@ const onGetphonenumber: UniHelper.ButtonOnGetphonenumber = async (ev) => {
 
 ::: tip 温馨提示
 
-为了更好实现登录后续的业务，后端提供了一个内部测试用的接口，只需要传手机号即可实现快捷登录。
+为了更好实现登录后续业务，后端提供[内部测试接口](https://apifox.com/apidoc/shared-0e6ee326-d646-41bd-9214-29dbf47648fa/api-43426851)，只需要传手机号即可实现快捷登录。
 
 :::
 
