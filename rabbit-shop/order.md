@@ -1381,7 +1381,7 @@ page {
 
 ::: warning 注意事项
 
-滚动驱动的动画目前只支持微信小程序端，暂不支持网页端。
+滚动驱动的动画目前**仅支持微信小程序端**，暂不支持 H5 端、App 端，多端兼容时添加条件编译。
 
 :::
 
@@ -1446,6 +1446,22 @@ onReady(() => {
   </scroll-view>
 </template>
 ```
+
+::: warning 版本升级
+
+- uni-app 不支持 `animate` 类型。
+- 原生微信小程序 支持 [animate 类型](https://github.com/wechat-miniprogram/api-typings/blob/master/types/wx/lib.wx.component.d.ts#L241-L246) 。
+- 当前需求可基于 原生微信小程序 的 [Page 实例类型](https://github.com/wechat-miniprogram/api-typings/blob/master/types/wx/lib.wx.page.d.ts#L161) 扩展 uni-app 的 Page 实例，参考代码 👇
+
+```ts {2,3}
+// 基于小程序的 Page 实例类型扩展 uni-app 的 Page
+type PageInstance = Page.PageInstance & WechatMiniprogram.Page.InstanceMethods<any>
+const pageInstance = pages.at(-1) as PageInstance
+
+const pageInstance = pages.at(-1) as any // [!code --]
+```
+
+:::
 
 ### 获取订单详情
 
@@ -1562,7 +1578,7 @@ export const orderStateList = [
 
 根据后端返回的数据渲染订单详情。
 
-```vue {1,20,32}
+```vue {2,20,32}
 <script setup lang="ts">
 import { OrderState, orderStateList } from '@/services/constants'
 
@@ -1646,7 +1662,7 @@ export const getMemberOrderRepurchaseByIdAPI = (id: string) => {
 
 填写订单页
 
-```vue {12,19,23,27}
+```vue {12,19-23,27}
 <script setup lang="ts">
 // 页面参数
 const query = defineProps<{
@@ -1666,9 +1682,9 @@ const getMemberOrderPreData = async () => {
     })
     orderPre.value = res.result
   } else if (query.orderId) {
-    // 再次购买      // [!code ++]
-    const res = await getMemberOrderRepurchaseByIdAPI(query.orderId) // [!code ++]
-    orderPre.value = res.result // [!code ++]
+    // 再次购买
+    const res = await getMemberOrderRepurchaseByIdAPI(query.orderId)
+    orderPre.value = res.result
   } else {
     // 预付订单
     const res = await getMemberOrderPreAPI()
@@ -1759,7 +1775,7 @@ export const getPayMockAPI = (data: { orderId: string }) => {
 
 通过[环境变量](https://cn.vitejs.dev/guide/env-and-mode.html)区分开发环境，调用不同接口。
 
-```vue {7,9,11-14}
+```vue {7-14}
 <script setup lang="ts">
 import { getPayMockAPI, getPayWxPayMiniPayAPI } from '@/services/pay'
 
@@ -2629,4 +2645,6 @@ onMounted(() => {
 
 ### 订单支付
 
-订单支付功能之前我们已经学习过，也不再重复，确认收货，删除订单等按钮的业务同理。
+订单支付功能之前我们已经学习过，也不再重复。
+
+确认收货，删除订单等按钮的业务同理。
