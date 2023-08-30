@@ -933,6 +933,8 @@ pages/cart
 
 ::: tip 温馨提示
 
-**tabBar 页**：小程序跳转到 tabBar 页面时，会关闭其他所有非 tabBar 页面，所以小程序的 tabBar 页没有后退按钮。
+- 小程序 [跳转到 tabBar 页面](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html) 时，会关闭其他所有非 tabBar 页面。
+- 小程序的 **tabBar 页没有后退按钮**，可通过 [getCurrentPages()](https://developers.weixin.qq.com/miniprogram/dev/reference/api/getCurrentPages.html) 验证，结果仅有一个页面，意味着历史记录被清空了。
+- **有历史记录**的普通页才显示后退按钮。
 
 :::
