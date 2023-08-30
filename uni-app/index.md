@@ -227,7 +227,7 @@ vue3 + ts 版
 npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 ```
 
-```sh [gitee]
+```sh [👉国内 gitee]
 # 通过 git 从 gitee 克隆下载 (👉备用地址)
 git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 ```
