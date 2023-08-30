@@ -801,7 +801,7 @@ const onSubmit = async () => {
 
 ### 参考代码
 
-```vue {3-19,51,53,56,57,65,66,77,78,81,91}
+```vue {3-19,51,53,57,66,78}
 <script setup lang="ts">
 // 定义校验规则
 const rules: UniHelper.UniFormsRules = {
@@ -870,8 +870,8 @@ const onSubmit = async () => {
       <uni-forms-item name="fullLocation" class="form-item">
         <text class="label">所在地区</text>
         <picker
-          @change="onRegionChange"
           class="picker"
+          @change="onRegionChange"
           mode="region"
           :value="form.fullLocation.split(' ')"
         >
@@ -886,9 +886,9 @@ const onSubmit = async () => {
       <view class="form-item">
         <label class="label">设为默认地址</label>
         <switch
-          @change="onSwitchChange"
           class="switch"
           color="#27ba9b"
+          @change="onSwitchChange"
           :checked="form.isDefault === 1"
         />
       </view>
