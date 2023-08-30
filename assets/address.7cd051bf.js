@@ -1,0 +1,1 @@
+import{h as e}from"./http.232d223e.js";const d=d=>e({method:"POST",url:"/member/address",data:d}),m=()=>e({method:"GET",url:"/member/address"}),r=d=>e({method:"GET",url:`/member/address/${d}`}),s=(d,m)=>e({method:"PUT",url:`/member/address/${d}`,data:m}),a=d=>e({method:"DELETE",url:`/member/address/${d}`});export{r as a,d as b,a as d,m as g,s as p};

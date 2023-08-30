@@ -1,0 +1,1 @@
+import{h as t}from"./http.232d223e.js";const o=(o=1)=>t({method:"GET",url:"/home/banner",data:{distributionSite:o}}),e=()=>t({method:"GET",url:"/home/category/mutli"}),m=()=>t({method:"GET",url:"/home/hot/mutli"}),a=o=>t({method:"GET",url:"/home/goods/guessLike",data:o});export{e as a,m as b,a as c,o as g};
