@@ -5,8 +5,8 @@
 <table>
   <tr>
     <td>体验小程序端</td>
-    <td>体验 H5 端</td>
-    <td>体验 App 端(安卓)</td>
+    <td><a target="_blank" href="https://megasu.gitee.io/uniapp-shop-vue3-ts/">体验 H5 端</a></td>
+    <td><a target="_blank" href="https://gitee.com/Megasu/uniapp-shop-vue3-ts/releases/download/v1.0.0/heima-shop.apk">体验 App 端(安卓)</a></td>
   </tr>
   <tr>
     <td><img width="300" src="./assets/code-mp-weixin.png" alt=""></td>
@@ -49,9 +49,9 @@
 git clone http://git.itcast.cn/heimaqianduan/erabbit-uni-app-vue3-ts.git heima-shop
 ```
 
-> 注意事项
->
-> - 在 `manifest.json` 中添加微信小程序的 `appid`
+::: tip 注意事项
+小程序真机预览需在 `manifest.json` 中添加微信小程序的 `appid`
+:::
 
 ## 引入 uni-ui 组件库
 
@@ -96,9 +96,10 @@ pnpm i -D @uni-helper/uni-ui-types
   "compilerOptions": {
     // ...
     "types": [
-      "@dcloudio/types",
-      "@uni-helper/uni-app-types",
-      "@uni-helper/uni-ui-types" // [!code ++]
+      "@dcloudio/types", // uni-app API 类型
+      "miniprogram-api-typings", // 原生微信小程序类型
+      "@uni-helper/uni-app-types", // uni-app 组件类型
+      "@uni-helper/uni-ui-types" // uni-ui 组件类型  // [!code ++]
     ]
   },
   // vue 编译器类型，校验标签类型
@@ -259,8 +260,10 @@ export const useMemberStore = defineStore(
 ```ts
 // src/utils/http.ts
 
+// 请求基地址
 const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net'
 
+// 拦截器配置
 const httpInterceptor = {
   // 拦截前触发
   invoke(options: UniApp.RequestOptions) {
@@ -290,9 +293,9 @@ uni.addInterceptor('request', httpInterceptor)
 uni.addInterceptor('uploadFile', httpInterceptor)
 ```
 
-::: tip 温馨提示
+::: warning 注意事项
 
-微信小程序端，需登录 [微信公众平台](https://mp.weixin.qq.com) 配置合法域名
+微信小程序端，需登录 [微信公众平台](https://mp.weixin.qq.com) 配置合法域名 👇
 
 `https://pcapi-xiaotuxian-front-devtest.itheima.net`
 
