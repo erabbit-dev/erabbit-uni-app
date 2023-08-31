@@ -90,6 +90,12 @@
   padding: 25px 0;
 }
 
-.vp-doc .custom-block a {
+.vp-doc a {
   text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: all 0.25s;
+}
+
+.vp-doc a:hover {
+  text-underline-offset: 4px;
 }
