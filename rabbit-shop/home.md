@@ -271,7 +271,7 @@ Volar 插件说明：[Vue Language Tools](https://github.com/vuejs/language-tool
 
 ```ts
 // src/types/components.d.ts
-import XtxSwiper from './XtxSwiper.vue’
+import XtxSwiper from './XtxSwiper.vue'
 declare module 'vue' {
   export interface GlobalComponents {
     XtxSwiper: typeof XtxSwiper
