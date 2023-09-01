@@ -265,15 +265,33 @@ git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 
 ### 用 VS Code 开发配置
 
-- 👉 前置工作：安装 Vue3 插件，[点击查看官方文档](https://cn.vuejs.org/guide/typescript/overview.html#ide-support)
-  - 安装 **Vue Language Features (Volar)** ：Vue3 语法提示插件
-  - 安装 **TypeScript Vue Plugin (Volar)** ：Vue3+TS 插件
-  - **工作区禁用** Vue2 的 Vetur 插件(Vue3 插件和 Vue2 冲突)
-  - **工作区禁用** @builtin typescript 插件（禁用后开启 Vue3 的 TS 托管模式）
+项目采用 Vue3 + TS 开发 uni-app 项目，所以需要分别安装 Vue3 + TS 插件 和 uni-app 插件。
+
+#### 安装 Vue3 + TS 插件
+
+::: danger 注意事项
+
+没开发过 Vue3 + TS 项目的小伙伴注意，需要先安装 Vue3 和 TS 的插件，并完成以下配置 👇
+
+- 安装 [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) ：Vue3 语法提示插件
+- 安装 [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) ：Vue3 的 TS 插件
+- **工作区禁用** Vetur 插件(Vue2 插件和 Vue3 插件冲突)
+- **工作区禁用** @builtin typescript 插件（禁用后自动开启 Vue3 的 TS 托管模式）
+
+[查看 Vue3 官方文档](https://cn.vuejs.org/guide/typescript/overview.html#ide-support)
+
+:::
+
+**需禁用的插件**
+
+![工作区禁用](./assets/uniapp_vscode_setting.png)
+
+#### 安装 uni-app 插件
+
 - 👉 安装 uni-app 开发插件
-  - **uni-create-view** ：快速创建 uni-app 页面
-  - **uni-helper uni-app** ：代码提示
-  - **uniapp 小程序扩展** ：鼠标悬停查文档
+  - [uni-create-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) ：快速创建 uni-app 页面
+  - [uni-helper](https://marketplace.visualstudio.com/items?itemName=uni-helper.uni-helper-vscode) ：uni-app 代码提示
+  - [uniapp 小程序扩展](https://marketplace.visualstudio.com/items?itemName=evils.uniapp-vscode) ：鼠标悬停查文档
 - 👉 TS 类型校验
   - 安装 **类型声明文件** `pnpm i -D miniprogram-api-typings @uni-helper/uni-app-types`
   - 配置 `tsconfig.json`
