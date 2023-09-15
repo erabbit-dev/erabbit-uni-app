@@ -560,7 +560,7 @@ export type AddressItem = {
 复用地址类型：`src/types/goods.d.ts`
 
 ```diff
-+ import type { AddressItem } from './global'
++ import type { AddressItem } from './address'
 
 - /** 地址信息 */
 - export type AddressItem = {
