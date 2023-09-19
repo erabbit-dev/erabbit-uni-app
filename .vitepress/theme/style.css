@@ -99,3 +99,7 @@
 .vp-doc a:hover {
   text-underline-offset: 4px;
 }
+
+[data-fancybox='gallery'] {
+  cursor: zoom-in;
+}

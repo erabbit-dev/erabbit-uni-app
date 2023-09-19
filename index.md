@@ -30,5 +30,5 @@ features:
 ---
 
 <div class="home-container">
-  <img src="https://badges.toozhao.com/badges/01GZZ947GMY13676X8N3FB5V32/green.svg" />
+  <img data-fancybox="gallery" src="https://badges.toozhao.com/badges/01GZZ947GMY13676X8N3FB5V32/green.svg" />
 </div>

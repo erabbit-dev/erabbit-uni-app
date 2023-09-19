@@ -1159,7 +1159,7 @@ wx.getLocation({
 ```vue
 <template>
   <!-- #ifdef H5 -->
-  <img src="/static/img/logo.png" />
+  <img data-fancybox="gallery" src="/static/img/logo.png" />
   <!-- #endif -->
 
   <!-- #ifdef MP-WEIXIN -->

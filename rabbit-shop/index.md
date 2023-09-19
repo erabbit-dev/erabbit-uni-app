@@ -9,9 +9,9 @@
     <td><a target="_blank" href="https://gitee.com/Megasu/uniapp-shop-vue3-ts/releases/download/v1.0.0/heima-shop.apk">体验 App 端(安卓)</a></td>
   </tr>
   <tr>
-    <td><img width="300" src="./assets/code-mp-weixin.png" alt=""></td>
-    <td><img width="300" src="./assets/code-h5.png" alt=""></td>
-    <td><img width="300" src="./assets/code-android.png" alt=""></td>
+    <td><img data-fancybox="gallery" width="300" src="./assets/code-mp-weixin.png" alt=""></td>
+    <td><img data-fancybox="gallery" width="300" src="./assets/code-h5.png" alt=""></td>
+    <td><img data-fancybox="gallery" width="300" src="./assets/code-android.png" alt=""></td>
   </tr>
 </table>
 

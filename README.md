@@ -15,9 +15,9 @@
     <td><a target="_blank" href="https://gitee.com/Megasu/uniapp-shop-vue3-ts/releases/download/v1.0.0/heima-shop.apk">体验 App 端(安卓)</a></td>
   </tr>
   <tr>
-    <td><img width="300" src="./README/images/code-mp-weixin.png" alt=""></td>
-    <td><img width="300" src="./README/images/code-h5.png" alt=""></td>
-    <td><img width="300" src="./README/images/code-android.png" alt=""></td>
+    <td><img data-fancybox="gallery" width="300" src="./README/images/code-mp-weixin.png" alt=""></td>
+    <td><img data-fancybox="gallery" width="300" src="./README/images/code-h5.png" alt=""></td>
+    <td><img data-fancybox="gallery" width="300" src="./README/images/code-android.png" alt=""></td>
   </tr>
 </table>
 
@@ -53,20 +53,20 @@
 
 <table>
   <tr>
-    <td><img width="100" src="./README/images/screenshot_1.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_2.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_3.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_4.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_5.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_6.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_1.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_2.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_3.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_4.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_5.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_6.jpg" alt=""></td>
   </tr>
   <tr>
-    <td><img width="100" src="./README/images/screenshot_7.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_8.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_9.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_10.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_11.jpg" alt=""></td>
-    <td><img width="100" src="./README/images/screenshot_12.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_7.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_8.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_9.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_10.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_11.jpg" alt=""></td>
+    <td><img data-fancybox="gallery" width="100" src="./README/images/screenshot_12.jpg" alt=""></td>
   </tr>
 </table>
 
