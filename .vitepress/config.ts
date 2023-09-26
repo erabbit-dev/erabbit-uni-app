@@ -1,17 +1,36 @@
 import { defineConfig } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
-import mdItCustomAttrs from 'markdown-it-custom-attrs'
+import type { MarkdownRenderer } from 'vitepress'
+
+// md 添加自定义属性
+function MdCustomAttrPugin(md: MarkdownRenderer, type: string, mdOptions: object) {
+  const defaultRenderer = md.renderer.rules[type]
+
+  if (defaultRenderer) {
+    md.renderer.rules[type] = (tokens, idx, options, env, self) => {
+      const token = tokens[idx]
+      if (mdOptions) {
+        for (let i in mdOptions) {
+          token.attrSet(i, mdOptions[i])
+        }
+      }
+      return defaultRenderer(tokens, idx, options, env, self)
+    }
+  }
+}
 
 // https://vitepress.dev/reference/site-config
 export default withPwa(
   defineConfig({
     markdown: {
+      // 显示行号
       lineNumbers: true,
+      // 使用主题
+      theme: 'material-theme-palenight',
+      // md 配置
       config: (md) => {
-        // use more markdown-it plugins!
-        md.use(mdItCustomAttrs, 'image', {
-          'data-fancybox': 'gallery',
-        })
+        // 大图预览插件配置
+        md.use(MdCustomAttrPugin, 'image', { 'data-fancybox': 'gallery' })
       },
     },
     lang: 'zh-CN',
@@ -27,7 +46,7 @@ export default withPwa(
           href: '/uni-app-shop-note/favicon.ico',
         },
       ],
-      // use more markdown-it plugins!
+      // 大图预览插件资源
       [
         'link',
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css' },
@@ -39,6 +58,27 @@ export default withPwa(
       logo: '/logo.png',
       siteTitle: '小兔鲜儿-小程序',
       returnToTopLabel: '返回顶部',
+      search: {
+        provider: 'local',
+        options: {
+          translations: {
+            button: {
+              buttonText: '搜索文档',
+              buttonAriaLabel: '搜索文档',
+            },
+            modal: {
+              displayDetails: '展开详情',
+              noResultsText: '无法找到相关结果',
+              resetButtonTitle: '清除查询条件',
+
+              footer: {
+                selectText: '选择',
+                navigateText: '切换',
+              },
+            },
+          },
+        },
+      },
       outline: {
         label: '目录',
         level: 'deep',
