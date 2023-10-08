@@ -206,13 +206,9 @@ const activeIndex = ref(0)
 </template>
 
 <style lang="scss">
-:host {
-  display: block;
-  height: 280rpx;
-}
 /* 轮播图 */
 .carousel {
-  height: 100%;
+  height: 280rpx;
   position: relative;
   overflow: hidden;
   transform: translateY(0);
@@ -273,9 +269,9 @@ Volar 插件说明：[Vue Language Tools](https://github.com/vuejs/language-tool
 // src/types/components.d.ts
 import XtxSwiper from './XtxSwiper.vue'
 declare module 'vue' {
-  export interface GlobalComponents {
-    XtxSwiper: typeof XtxSwiper
-  }
+  export interface GlobalComponents {
+    XtxSwiper: typeof XtxSwiper
+  }
 }
 ```
 
