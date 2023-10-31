@@ -222,14 +222,14 @@ vue3 + ts 版
 
 ::: code-group
 
-```sh [github]
-# 通过 npx 从 github 下载
-npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
+```sh [👉国内 gitee 下载]
+# 通过 git 从 gitee 克隆下载
+git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
 ```
 
-```sh [👉国内 gitee]
-# 通过 git 从 gitee 克隆下载 (👉备用地址)
-git clone -b vite-ts https://gitee.com/dcloud/uni-preset-vue.git
+```sh [github 下载]
+# 通过 npx 从 github 下载
+npx degit dcloudio/uni-preset-vue#vite-ts 项目名称
 ```
 
 :::

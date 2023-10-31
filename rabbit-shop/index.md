@@ -45,9 +45,17 @@
 
 ### 模板地址
 
-```sh
+::: code-group
+
+```sh [👉新仓库地址]
+git clone -b template https://gitee.com/heima-fe/uniapp-shop-vue3-ts.git heima-shop
+```
+
+```sh [旧仓库地址]
 git clone http://git.itcast.cn/heimaqianduan/erabbit-uni-app-vue3-ts.git heima-shop
 ```
+
+:::
 
 ::: tip 注意事项
 小程序真机预览需在 `manifest.json` 中添加微信小程序的 `appid`
@@ -293,9 +301,11 @@ uni.addInterceptor('request', httpInterceptor)
 uni.addInterceptor('uploadFile', httpInterceptor)
 ```
 
-::: warning 注意事项
+::: warning 常见问题
 
-微信小程序端，需登录 [微信公众平台](https://mp.weixin.qq.com) 配置合法域名 👇
+**问:** 为什么用手机预览没有数据？
+
+**答:** 微信小程序端，需登录 [微信公众平台](https://mp.weixin.qq.com) 配置以下地址为合法域名 👇
 
 `https://pcapi-xiaotuxian-front-devtest.itheima.net`
 
